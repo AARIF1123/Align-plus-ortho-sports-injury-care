@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Regenerative Orthopedics & Orthobiologics - Advanced treatments using PRP, stem cells, and biologics for natural healing at Align Plus Ortho">
+    <title>Regenerative Orthopedics & Orthobiologics | Align Plus Ortho</title>
+        <link rel="icon" type="image/x-icon" href="LOGO-removebg-preview.png">
+    <link rel="apple-touch-icon" href="LOGO-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #769889;
+            --primary-dark: #5a7c6e;
+            --primary-light: #a3c4b5;
+            --accent: #e6b74c;
+            --accent-dark: #d6a841;
+            --dark: #1a2d27;
+            --light: #f8f9f8;
+            --gray: #eef0ef;
+            --text: #333333;
+            --text-light: #5a6d66;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --border-radius: 12px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--dark);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 30px auto 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 36px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 0 8px 20px rgba(118, 152, 137, 0.25);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+            transition: var(--transition);
+            z-index: -1;
+            border-radius: 50px;
+        }
+
+        .btn:hover::before {
+            width: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(118, 152, 137, 0.35);
+        }
+
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+        }
+
+        .btn-accent::before {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo Image Styling */
+        .logo-img {
+            height: 60px;
+            width: auto;
+            max-width: 220px;
+            object-fit: contain;
+            transition: var(--transition);
+        }
+
+        .logo {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 35px;
+        }
+
+        nav a {
+            font-weight: 600;
+            font-size: 1.05rem;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            color: var(--primary);
+            background-color: rgba(118, 152, 137, 0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .service-hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(26, 45, 39, 0.9), rgba(26, 45, 39, 0.95)), url('roo.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+            padding-top: 120px;
+        }
+
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e6b74c' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .service-hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-hero-content h1 {
+            font-size: 4rem;
+            color: var(--white);
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .service-hero-content h1 span {
+            color: var(--accent);
+        }
+
+        .service-hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .service-hero-image {
+            position: relative;
+        }
+
+        .service-hero-img {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+            transform: perspective(1000px) rotateY(-10deg);
+            transition: var(--transition);
+        }
+
+        .service-hero-img:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .service-hero-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* What is Regenerative Orthopedics Section */
+        .what-is-section {
+            background: linear-gradient(135deg, rgba(118, 152, 137, 0.05), rgba(230, 183, 76, 0.05));
+            position: relative;
+        }
+
+        .what-is-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .what-is-content h2 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+        }
+
+        .what-is-content p {
+            margin-bottom: 25px;
+            color: var(--text-light);
+        }
+
+        .what-is-image {
+            position: relative;
+        }
+
+        .what-is-img {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .what-is-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .what-is-img:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Treatments Section */
+        .treatments-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .treatment-item {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 50px 40px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            height: 100%;
+        }
+
+        .treatment-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            z-index: 2;
+        }
+
+        .treatment-item:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .treatment-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, rgba(118, 152, 137, 0.1), rgba(230, 183, 76, 0.1));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 2.5rem;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .treatment-item:hover .treatment-icon {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            transform: rotateY(180deg);
+        }
+
+        .treatment-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background-color: var(--gray);
+        }
+
+        .benefits-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+
+        .benefits-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 25px;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .benefit-item:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .benefit-content h4 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        /* Process Section */
+        .process-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+        }
+
+        .process-step {
+            position: relative;
+            margin-bottom: 80px;
+            width: 100%;
+        }
+
+        .process-step:nth-child(odd) {
+            padding-right: 50%;
+            text-align: right;
+            padding-right: 60%;
+        }
+
+        .process-step:nth-child(even) {
+            padding-left: 50%;
+            padding-left: 60%;
+        }
+
+        .process-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-circle {
+            position: absolute;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 0 0 8px rgba(118, 152, 137, 0.2);
+        }
+
+        .process-step:nth-child(odd) .step-circle {
+            right: -20px;
+        }
+
+        .process-step:nth-child(even) .step-circle {
+            left: -20px;
+        }
+
+        .step-content {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .step-content:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .step-content h4 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+
+        /* Conditions Treated */
+        .conditions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .condition-item {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--accent);
+        }
+
+        .condition-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .condition-item h4 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 3rem;
+            color: var(--white);
+            margin-bottom: 25px;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 100px 0 30px;
+            position: relative;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        .footer-logo-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .footer-col p {
+            margin-bottom: 25px;
+            opacity: 0.8;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .footer-links a i {
+            color: var(--accent);
+            font-size: 0.8rem;
+        }
+
+        .contact-info li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .contact-info i {
+            color: var(--accent);
+            margin-top: 5px;
+            font-size: 1.1rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .treatments-grid,
+            .conditions-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .benefits-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .service-hero-container,
+            .what-is-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-hero-content h1 {
+                font-size: 3rem;
+            }
+            
+            .process-step:nth-child(odd),
+            .process-step:nth-child(even) {
+                padding: 0 0 0 60px;
+                text-align: left;
+            }
+            
+            .process-timeline::before {
+                left: 30px;
+            }
+            
+            .process-step:nth-child(odd) .step-circle,
+            .process-step:nth-child(even) .step-circle {
+                left: 10px;
+                right: auto;
+            }
+            
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 80%;
+                height: 100vh;
+                background-color: var(--white);
+                box-shadow: var(--shadow-hover);
+                transition: var(--transition);
+                padding: 100px 40px 40px;
+                z-index: 999;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 25px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                z-index: 1000;
+            }
+            
+            .header-phone {
+                display: none;
+            }
+            
+            .service-hero {
+                padding-top: 100px;
+            }
+            
+            .treatments-grid,
+            .conditions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-padding {
+                padding: 80px 0;
+            }
+            
+            .service-hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .service-hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 14px 30px;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="LOGO-removebg-preview.png" alt="Align Plus Logo" class="logo-img">
+            </a>
+
+            <!-- Navigation Menu -->
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#treatments">Treatments</a></li>
+                    <li><a href="index.html#doctor">Our Doctor</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="index.html#about" class="active">Regenerative Orthopedics</a></li>
+                </ul>
+            </nav>
+
+            <!-- Phone Number (Right Side) -->
+            <div class="header-actions">
+                <a href="tel:+919997772185" class="header-phone">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 99977 72185</span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <div class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container service-hero-container">
+            <div class="service-hero-content fade-in">
+                <h1>Regenerative <span>Orthopedics</span> & Orthobiologics</h1>
+                <p>Advanced treatments using PRP, stem cells, and other biologics to stimulate your body's natural healing process. Experience cutting-edge medicine that helps you recover faster and more completely.</p>
+                <div class="hero-btns">
+                    <a href="#cta" class="btn">Book Consultation</a>
+                    <a href="tel:+919997772185" class="btn btn-accent">Call Now</a>
+                </div>
+            </div>
+            
+            <div class="service-hero-image fade-in">
+                <div class="service-hero-img">
+                    <img src="roo.jpg" alt="Regenerative Orthopedics Treatment">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Regenerative Orthopedics Section -->
+    <section class="what-is-section section-padding">
+        <div class="container">
+            <div class="what-is-container">
+                <div class="what-is-image fade-in">
+                    <div class="what-is-img">
+                        <img src="doctorsuit.PNG" alt="Regenerative Medicine">
+                    </div>
+                </div>
+                
+                <div class="what-is-content fade-in">
+                    <h2>What is Regenerative Orthopedics?</h2>
+                    <p>Regenerative Orthopedics is a revolutionary approach to healing musculoskeletal injuries and conditions by harnessing your body's natural ability to repair itself. Unlike traditional treatments that focus on managing symptoms regenerative medicine aims to restore damaged tissues to their original form and function.</p>
+                    <p>At Align Plus Ortho, we specialize in Orthobiologics – the use of biological substances such as platelet-rich plasma (PRP) to stimulate and enhance the body's natural healing mechanisms.</p>
+                    <p>Our treatments are minimally invasive, promote faster recovery, and can often help patients avoid surgery or delay the need for joint replacement procedures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatments Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Regenerative Treatments</h2>
+                <p>Advanced biological therapies for optimal healing and recovery</p>
+            </div>
+            
+            <div class="treatments-grid">
+                <div class="treatment-item fade-in">
+                    <div class="treatment-icon">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <h3>Platelet-Rich Plasma (PRP)</h3>
+                    <p>Concentrated platelets from your own blood, rich in growth factors that accelerate healing of tendons, ligaments, muscles, and joints.</p>
+                </div>
+                
+                <div class="treatment-item fade-in">
+                    <div class="treatment-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3>Stem Cell Therapy</h3>
+                    <p>Using your body's own stem cells to regenerate damaged tissues, reduce inflammation, and promote healing in cartilage, bone, and soft tissues.</p>
+                </div>
+                
+                <div class="treatment-item fade-in">
+                    <div class="treatment-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h3>Bone Marrow Aspirate Concentrate (BMAC)</h3>
+                    <p>Concentrated bone marrow containing mesenchymal stem cells and growth factors for enhanced tissue regeneration.</p>
+                </div>
+<!--                 
+                <div class="treatment-item fade-in">
+                    <div class="treatment-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3>Growth Factor Injections</h3>
+                    <p>Targeted delivery of specific growth factors to stimulate tissue repair and reduce inflammation in affected areas.</p>
+                </div> -->
+                
+                <!-- <div class="treatment-item fade-in">
+                    <div class="treatment-icon">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <h3>Prolotherapy</h3>
+                    <p>Injection of natural irritants to stimulate the body's healing response in weakened ligaments and tendons.</p>
+                </div>
+                
+                <div class="treatment-item fade-in">
+                    <div class="treatment-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Amniotic Membrane Injections</h3>
+                    <p>Using amniotic tissue rich in growth factors and anti-inflammatory properties to promote healing and reduce pain.</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Benefits of Regenerative Orthopedics</h2>
+                <p>Why choose regenerative treatments over traditional approaches</p>
+            </div>
+            
+            <div class="benefits-container">
+                <div class="benefits-list">
+                    <div class="benefit-item fade-in">
+                        <div class="benefit-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Natural Healing</h4>
+                            <p>Uses your body's own healing mechanisms to repair damaged tissues naturally.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item fade-in">
+                        <div class="benefit-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Minimally Invasive</h4>
+                            <p>No major surgery required, just precise injections using image guidance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item fade-in">
+                        <div class="benefit-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Faster Recovery</h4>
+                            <p>Reduced downtime compared to traditional surgical procedures.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefits-list">
+                    <div class="benefit-item fade-in">
+                        <div class="benefit-icon">
+                            <i class="fas fa-allergies"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Reduced Risk</h4>
+                            <p>Lower risk of infection and complications compared to surgery.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item fade-in">
+                        <div class="benefit-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Pain Relief</h4>
+                            <p>Significant reduction in pain and inflammation in affected areas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item fade-in">
+                        <div class="benefit-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Long-lasting Results</h4>
+                            <p>Addresses the root cause of pain for sustainable improvement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Process Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Treatment Process</h2>
+                <p>Step-by-step approach to your regenerative treatment journey</p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step fade-in">
+                    <div class="step-circle">1</div>
+                    <div class="step-content">
+                        <h4>Comprehensive Evaluation</h4>
+                        <p>Thorough assessment including medical history, physical examination, and diagnostic imaging to determine if you're a candidate for regenerative therapy.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step fade-in">
+                    <div class="step-circle">2</div>
+                    <div class="step-content">
+                        <h4>Personalized Treatment Plan</h4>
+                        <p>Development of a customized treatment strategy based on your specific condition, goals, and medical needs.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step fade-in">
+                    <div class="step-circle">3</div>
+                    <div class="step-content">
+                        <h4>Minimally Invasive Procedure</h4>
+                        <p>Precise administration of regenerative biologics using ultrasound or fluoroscopic guidance for optimal placement.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step fade-in">
+                    <div class="step-circle">4</div>
+                    <div class="step-content">
+                        <h4>Post-Treatment Rehabilitation</h4>
+                        <p>Customized physical therapy program to maximize healing, restore function, and prevent re-injury.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step fade-in">
+                    <div class="step-circle">5</div>
+                    <div class="step-content">
+                        <h4>Follow-up & Monitoring</h4>
+                        <p>Regular check-ups to monitor progress and make any necessary adjustments to your treatment plan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conditions Treated Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Conditions We Treat</h2>
+                <p>Regenerative orthopedics can help with various musculoskeletal conditions</p>
+            </div>
+            
+            <div class="conditions-grid">
+                <div class="condition-item fade-in">
+                    <h4>Osteoarthritis</h4>
+                    <p>Knee, hip, shoulder, and spinal arthritis</p>
+                </div>
+                
+                <div class="condition-item fade-in">
+                    <h4>Tendon Injuries</h4>
+                    <p>Tennis elbow, golfer's elbow, rotator cuff tears</p>
+                </div>
+                
+                <div class="condition-item fade-in">
+                    <h4>Ligament Injuries</h4>
+                    <p>ACL tears, meniscus tears, ankle sprains</p>
+                </div>
+                
+                <div class="condition-item fade-in">
+                    <h4>Cartilage Damage</h4>
+                    <p>Articular cartilage defects, chondromalacia</p>
+                </div>
+                
+                <div class="condition-item fade-in">
+                    <h4>Muscle Tears</h4>
+                    <p>Hamstring, quadriceps, calf muscle tears</p>
+                </div>
+                
+                <div class="condition-item fade-in">
+                    <h4>Spinal Conditions</h4>
+                    <p>Degenerative disc disease, facet joint arthritis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section-padding" id="cta">
+        <div class="container">
+            <div class="cta-content fade-in">
+                <h2>Start Your Healing Journey Today</h2>
+                <p>If you're suffering from chronic joint pain, sports injuries, or degenerative conditions, regenerative orthopedics might be the solution you've been looking for. Contact us to schedule a consultation with Dr. Arunkumar T.</p>
+                <div class="hero-btns" style="justify-content: center;">
+                    <a href="tel:+919997772185" class="btn">Call Now: +91 99977 72185</a>
+                    <a href="index.html#contact" class="btn btn-accent">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <i class="fas fa-bone"></i>
+                        </div>
+                        <div class="footer-logo-text">
+                            <h3>ALIGN PLUS</h3>
+                            <p>Ortho & Sports Injury Care</p>
+                        </div>
+                    </div>
+                    <p>Advanced regenerative orthopedics and orthobiologics for natural healing and recovery.</p>
+                    <div class="logo-tagline" style="justify-content: flex-start; margin-top: 15px;">
+                        <span style="color: var(--accent)">REVIVE</span>
+                        <span style="color: var(--accent)">REGAIN</span>
+                        <span style="color: var(--accent)">REBUILD</span>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="index.html#treatments"><i class="fas fa-chevron-right"></i> All Treatments</a></li>
+                        <li><a href="index.html#doctor"><i class="fas fa-chevron-right"></i> Our Doctor</a></li>
+                        <li><a href="index.html#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Regenerative Treatments</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> PRP Therapy</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Stem Cell Therapy</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> BMAC Treatment</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Prolotherapy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address</strong>
+                                <p>44/1, Besant Avenue Road,<br>Padmanabha Nagar,<br>Adyar,<br>Chennai,<br>Tamil Nadu - 600020.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>+91 99977 72185</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>alignplusortho@gmail.com</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Timings</strong>
+                                <p>10am to 9pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div style="margin-top: 25px;">
+                        <a href="#cta" class="btn">Book Consultation</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2025 Align Plus Ortho & Sports Injury Care. All rights reserved. | Regenerative Orthopedics & Orthobiologics</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navbar = document.getElementById('navbar');
+        const header = document.getElementById('header');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navbar.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Active navigation link on scroll
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Scroll animation
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('fade-in');
+                }
+            });
+        };
+        
+        // Initial check
+        fadeInOnScroll();
+        
+        // Check on scroll
+        window.addEventListener('scroll', fadeInOnScroll);
+    </script>
+</body>
+</html>
