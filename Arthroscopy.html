@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert Arthroscopy & Keyhole Surgery at Align Plus Ortho - Minimally invasive joint surgery for faster recovery.">
+    <title>Arthroscopy & Keyhole Surgery | Align Plus Ortho, Chennai</title>
+        <link rel="icon" type="image/x-icon" href="LOGO-removebg-preview.png">
+    <link rel="apple-touch-icon" href="LOGO-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #769889;
+            --primary-dark: #5a7c6e;
+            --primary-light: #a3c4b5;
+            --accent: #e6b74c;
+            --accent-dark: #d6a841;
+            --dark: #1a2d27;
+            --light: #f8f9f8;
+            --gray: #eef0ef;
+            --text: #333333;
+            --text-light: #5a6d66;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --border-radius: 12px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--dark);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 30px auto 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 36px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 0 8px 20px rgba(118, 152, 137, 0.25);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+            transition: var(--transition);
+            z-index: -1;
+            border-radius: 50px;
+        }
+
+        .btn:hover::before {
+            width: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(118, 152, 137, 0.35);
+        }
+
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+        }
+
+        .btn-accent::before {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo Image Styling */
+        .logo-img {
+            height: 60px;
+            width: auto;
+            max-width: 220px;
+            object-fit: contain;
+            transition: var(--transition);
+        }
+
+        .logo {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 35px;
+        }
+
+        nav a {
+            font-weight: 600;
+            font-size: 1.05rem;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            color: var(--primary);
+            background-color: rgba(118, 152, 137, 0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .arthroscopy-hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(26, 45, 39, 0.9), rgba(26, 45, 39, 0.95)), url('https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+            padding-top: 120px;
+        }
+
+        .arthroscopy-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e6b74c' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .arthroscopy-hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .arthroscopy-hero-content h1 {
+            font-size: 4rem;
+            color: var(--white);
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .arthroscopy-hero-content h1 span {
+            color: var(--accent);
+        }
+
+        .arthroscopy-hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .arthroscopy-hero-image {
+            position: relative;
+        }
+
+        .arthroscopy-hero-img {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+            transform: perspective(1000px) rotateY(-10deg);
+            transition: var(--transition);
+        }
+
+        .arthroscopy-hero-img:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .arthroscopy-hero-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* What is Arthroscopy Section */
+        .what-is-arthroscopy {
+            background: linear-gradient(135deg, rgba(118, 152, 137, 0.05), rgba(230, 183, 76, 0.05));
+            position: relative;
+        }
+
+        .what-is-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .what-is-content h2 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+        }
+
+        .what-is-content p {
+            margin-bottom: 25px;
+            color: var(--text-light);
+        }
+
+        .benefits-list {
+            margin-top: 30px;
+        }
+
+        .benefits-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .benefits-list i {
+            color: var(--primary);
+            margin-top: 5px;
+            font-size: 1.2rem;
+        }
+
+        .what-is-image {
+            position: relative;
+        }
+
+        .what-is-img {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .what-is-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .what-is-img:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Conditions Treated Section */
+        .conditions-section {
+            background-color: var(--white);
+        }
+
+        .conditions-tabs {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .conditions-header {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .condition-tab {
+            padding: 18px 40px;
+            background: var(--gray);
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .condition-tab.active {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .condition-tab:not(.active):hover {
+            background: rgba(118, 152, 137, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .condition-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .condition-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .condition-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .condition-item {
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            transition: var(--transition);
+            border-left: 4px solid var(--primary);
+        }
+
+        .condition-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+        }
+
+        .condition-item h4 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .condition-item h4 i {
+            color: var(--accent);
+        }
+
+        /* Procedure Steps Section */
+        .procedure-section {
+            background-color: var(--gray);
+        }
+
+        .procedure-steps {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .procedure-steps::before {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: 50px;
+            width: 4px;
+            height: calc(100% - 120px);
+            background: linear-gradient(180deg, var(--primary), var(--accent));
+            transform: translateX(-50%);
+        }
+
+        .procedure-step {
+            display: flex;
+            gap: 50px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+            box-shadow: var(--shadow);
+        }
+
+        .step-content {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            flex: 1;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .step-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .step-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        /* Recovery Timeline Section */
+        .recovery-section {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .recovery-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .recovery-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .recovery-timeline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .recovery-phase {
+            text-align: center;
+            padding: 40px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .recovery-phase:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-10px);
+        }
+
+        .phase-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: var(--dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 25px;
+            box-shadow: 0 0 0 8px rgba(230, 183, 76, 0.2);
+        }
+
+        .recovery-phase h4 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .recovery-phase p {
+            opacity: 0.9;
+        }
+
+        /* Comparison Section */
+        .comparison-section {
+            background-color: var(--white);
+        }
+
+        .comparison-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .comparison-card {
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            padding: 50px 40px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .comparison-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            z-index: 2;
+        }
+
+        .arthroscopy-card::before {
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+        }
+
+        .traditional-card::before {
+            background: linear-gradient(90deg, var(--text-light), var(--text));
+        }
+
+        .comparison-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .comparison-icon {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 2.5rem;
+            transition: var(--transition);
+        }
+
+        .arthroscopy-card .comparison-icon {
+            background: linear-gradient(135deg, rgba(118, 152, 137, 0.1), rgba(230, 183, 76, 0.1));
+            color: var(--primary);
+        }
+
+        .traditional-card .comparison-icon {
+            background: linear-gradient(135deg, rgba(90, 109, 102, 0.1), rgba(51, 51, 51, 0.1));
+            color: var(--text);
+        }
+
+        .comparison-card:hover .comparison-icon {
+            transform: rotateY(180deg);
+        }
+
+        .comparison-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .comparison-list {
+            text-align: left;
+            margin-top: 25px;
+        }
+
+        .comparison-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .arthroscopy-card .comparison-list li i {
+            color: var(--primary);
+        }
+
+        .traditional-card .comparison-list li i {
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--gray);
+        }
+
+        .faq-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background-color: rgba(118, 152, 137, 0.05);
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 30px 25px 30px;
+            max-height: 500px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: var(--dark);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%231a2d27' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 3rem;
+            color: var(--dark);
+            margin-bottom: 25px;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 100px 0 30px;
+            position: relative;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        .footer-logo-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .footer-col p {
+            margin-bottom: 25px;
+            opacity: 0.8;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .footer-links a i {
+            color: var(--accent);
+            font-size: 0.8rem;
+        }
+
+        .contact-info li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .contact-info i {
+            color: var(--accent);
+            margin-top: 5px;
+            font-size: 1.1rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .recovery-timeline {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .arthroscopy-hero-container,
+            .what-is-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .arthroscopy-hero-content h1 {
+                font-size: 3rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+            
+            .procedure-steps::before {
+                left: 40px;
+            }
+            
+            .step-number {
+                width: 80px;
+                height: 80px;
+                font-size: 2rem;
+            }
+            
+            .condition-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 80%;
+                height: 100vh;
+                background-color: var(--white);
+                box-shadow: var(--shadow-hover);
+                transition: var(--transition);
+                padding: 100px 40px 40px;
+                z-index: 999;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 25px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                z-index: 1000;
+            }
+            
+            .header-phone {
+                display: none;
+            }
+            
+            .arthroscopy-hero {
+                padding-top: 100px;
+            }
+            
+            .procedure-steps::before {
+                display: none;
+            }
+            
+            .procedure-step {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .step-number {
+                align-self: center;
+            }
+            
+            .recovery-timeline {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-padding {
+                padding: 80px 0;
+            }
+            
+            .arthroscopy-hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .conditions-header {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .arthroscopy-hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 14px 30px;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="LOGO-removebg-preview.png" alt="Align Plus Logo" class="logo-img">
+            </a>
+
+            <!-- Navigation Menu -->
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#treatments">Treatments</a></li>
+                    <li><a href="index.html#doctor">Our Doctor</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="sports-injury.html">Sports Injury</a></li>
+                </ul>
+            </nav>
+
+            <!-- Phone Number (Right Side) -->
+            <div class="header-actions">
+                <a href="tel:+919997772185" class="header-phone">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 99977 72185</span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <div class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="arthroscopy-hero">
+        <div class="container arthroscopy-hero-container">
+            <div class="arthroscopy-hero-content fade-in">
+                <h1>Arthroscopy & <span>Keyhole Surgery</span></h1>
+                <p>Minimally invasive joint surgery for faster recovery, less pain, and better outcomes. Our expert surgeons use advanced arthroscopic techniques to diagnose and treat joint problems with precision.</p>
+                <div class="hero-btns">
+                    <a href="#cta" class="btn">Book Arthroscopy Consultation</a>
+                    <a href="tel:+919997772185" class="btn btn-accent">Emergency Consultation</a>
+                </div>
+            </div>
+            
+            <div class="arthroscopy-hero-image fade-in">
+                <div class="arthroscopy-hero-img">
+                    <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Arthroscopy Surgery">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Arthroscopy Section -->
+    <section class="what-is-arthroscopy section-padding">
+        <div class="container">
+            <div class="what-is-container">
+                <div class="what-is-image fade-in">
+                    <div class="what-is-img">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Arthroscopy Procedure">
+                    </div>
+                </div>
+                
+                <div class="what-is-content fade-in">
+                    <h2>What is Arthroscopy?</h2>
+                    <p>Arthroscopy, also known as keyhole surgery, is a minimally invasive surgical procedure that allows orthopedic surgeons to visualize, diagnose, and treat problems inside a joint through small incisions, using a tiny camera called an arthroscope.</p>
+                    <p>This advanced technique provides numerous benefits over traditional open surgery, including less tissue damage, reduced pain, faster recovery times, and minimal scarring.</p>
+                    
+                    <div class="benefits-list">
+                        <h3>Key Benefits of Arthroscopy:</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> <strong>Minimally Invasive:</strong> Small incisions (only 5-10mm)</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Less Pain:</strong> Reduced postoperative discomfort</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Faster Recovery:</strong> Return to normal activities sooner</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Minimal Scarring:</strong> Almost invisible scars</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Accurate Diagnosis:</strong> Direct visualization of joint structures</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Outpatient Procedure:</strong> Often done as day surgery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conditions Treated Section -->
+    <section class="conditions-section section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Conditions Treated with Arthroscopy</h2>
+                <p>Expert treatment for a wide range of joint problems</p>
+            </div>
+            
+            <div class="conditions-tabs">
+                <div class="conditions-header">
+                    <button class="condition-tab active" data-condition="knee">Knee Arthroscopy</button>
+                    <button class="condition-tab" data-condition="shoulder">Shoulder Arthroscopy</button>
+                    <button class="condition-tab" data-condition="hip">Hip Arthroscopy</button>
+                    <button class="condition-tab" data-condition="ankle">Ankle Arthroscopy</button>
+                </div>
+                
+                <!-- Knee Conditions -->
+                <div class="condition-content active" id="knee">
+                    <div class="condition-grid">
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-bone"></i> ACL Reconstruction</h4>
+                            <p>Repair or reconstruction of torn anterior cruciate ligament using arthroscopic techniques.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-cut"></i> Meniscus Repair</h4>
+                            <p>Treatment of torn meniscus cartilage, either by repair or partial removal.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-snowflake"></i> Cartilage Restoration</h4>
+                            <p>Procedures to repair or regenerate damaged articular cartilage in the knee.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-syringe"></i> Synovectomy</h4>
+                            <p>Removal of inflamed synovial tissue in conditions like rheumatoid arthritis.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-weight"></i> Patellar Realignment</h4>
+                            <p>Correction of patellar tracking problems and stabilization procedures.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-procedures"></i> Loose Body Removal</h4>
+                            <p>Removal of loose bone or cartilage fragments from the knee joint.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Shoulder Conditions -->
+                <div class="condition-content" id="shoulder">
+                    <div class="condition-grid">
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-rotate"></i> Rotator Cuff Repair</h4>
+                            <p>Arthroscopic repair of torn rotator cuff tendons in the shoulder.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-hand-rock"></i> Shoulder Stabilization</h4>
+                            <p>Treatment for recurrent shoulder dislocations and instability.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-compress"></i> Impingement Syndrome</h4>
+                            <p>Decompression surgery for shoulder impingement and bursitis.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-ring"></i> Labral Repair</h4>
+                            <p>Repair of torn labrum (SLAP tears, Bankart lesions).</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-unlink"></i> AC Joint Reconstruction</h4>
+                            <p>Treatment for AC joint separations and arthritis.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-arrows-alt-h"></i> Frozen Shoulder Release</h4>
+                            <p>Arthroscopic release for adhesive capsulitis (frozen shoulder).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hip Conditions -->
+                <div class="condition-content" id="hip">
+                    <div class="condition-grid">
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-ring"></i> Hip Labral Repair</h4>
+                            <p>Repair of torn labrum in the hip joint.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-compress-alt"></i> Femoroacetabular Impingement</h4>
+                            <p>Bone reshaping for FAI syndrome causing hip pain.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-snowflake"></i> Cartilage Restoration</h4>
+                            <p>Treatment for cartilage defects in the hip joint.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-syringe"></i> Synovectomy</h4>
+                            <p>Removal of inflamed synovial tissue in the hip.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-unlink"></i> Ligamentum Teres Repair</h4>
+                            <p>Treatment for torn ligamentum teres in the hip.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-procedures"></i> Loose Body Removal</h4>
+                            <p>Removal of loose fragments from the hip joint.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ankle Conditions -->
+                <div class="condition-content" id="ankle">
+                    <div class="condition-grid">
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-bone"></i> Ankle Stabilization</h4>
+                            <p>Repair of chronic ankle instability and ligament reconstruction.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-snowflake"></i> Cartilage Repair</h4>
+                            <p>Treatment for osteochondral defects in the ankle.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-compress"></i> Ankle Impingement</h4>
+                            <p>Removal of bone spurs and soft tissue causing impingement.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-cut"></i> Synovectomy</h4>
+                            <p>Removal of inflamed synovial tissue in arthritic ankles.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-procedures"></i> Loose Body Removal</h4>
+                            <p>Removal of loose fragments from the ankle joint.</p>
+                        </div>
+                        
+                        <div class="condition-item fade-in">
+                            <h4><i class="fas fa-ankh"></i> Tendon Repair</h4>
+                            <p>Arthroscopic treatment of tendon disorders around the ankle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Procedure Steps Section -->
+    <section class="procedure-section section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Arthroscopy Procedure</h2>
+                <p>Step-by-step process of minimally invasive keyhole surgery</p>
+            </div>
+            
+            <div class="procedure-steps">
+                <div class="procedure-step fade-in">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Preoperative Preparation</h3>
+                        <p>Thorough medical evaluation, imaging studies (MRI, X-rays), and anesthesia planning. You'll receive specific instructions about medications, fasting, and preparation for surgery day.</p>
+                    </div>
+                </div>
+                
+                <div class="procedure-step fade-in">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Anesthesia Administration</h3>
+                        <p>Depending on the joint and procedure, anesthesia options include general anesthesia, regional anesthesia (spinal/epidural), or local anesthesia with sedation to ensure complete comfort during surgery.</p>
+                    </div>
+                </div>
+                
+                <div class="procedure-step fade-in">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Small Incisions & Portal Creation</h3>
+                        <p>2-3 small incisions (5-10mm each) are made around the joint. These serve as portals for the arthroscope and specialized surgical instruments.</p>
+                    </div>
+                </div>
+                
+                <div class="procedure-step fade-in">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Joint Examination & Diagnosis</h3>
+                        <p>The arthroscope (tiny camera) is inserted, providing a magnified view of the joint interior on a high-definition monitor, allowing precise diagnosis of the problem.</p>
+                    </div>
+                </div>
+                
+                <div class="procedure-step fade-in">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Surgical Treatment</h3>
+                        <p>Specialized miniature instruments are used to perform the necessary repairs, removal, or reconstruction based on the diagnosis, all under direct visualization.</p>
+                    </div>
+                </div>
+                
+                <div class="procedure-step fade-in">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Closure & Recovery</h3>
+                        <p>The instruments are removed, incisions are closed with sutures or steri-strips, and a sterile dressing is applied. You'll begin recovery immediately with specific rehabilitation instructions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recovery Timeline Section -->
+    <section class="recovery-section section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Arthroscopy Recovery Timeline</h2>
+                <p style="color: rgba(255,255,255,0.9);">What to expect during your recovery journey</p>
+            </div>
+            
+            <div class="recovery-timeline">
+                <div class="recovery-phase fade-in">
+                    <div class="phase-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h4>Immediate Post-Op (0-3 Days)</h4>
+                    <p>Pain management, rest, ice application, elevation, and gentle movement as tolerated. Most patients go home the same day.</p>
+                </div>
+                
+                <div class="recovery-phase fade-in">
+                    <div class="phase-icon">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <h4>Early Rehabilitation (1-2 Weeks)</h4>
+                    <p>Begin physical therapy, gentle range of motion exercises, weight-bearing as allowed, and wound care. Return to sedentary work if needed.</p>
+                </div>
+                
+                <div class="recovery-phase fade-in">
+                    <div class="phase-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h4>Strength Building (2-6 Weeks)</h4>
+                    <p>Progressive strengthening exercises, increased activity level, return to light daily activities, and driving (if joint allows).</p>
+                </div>
+                
+                <div class="recovery-phase fade-in">
+                    <div class="phase-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h4>Return to Activity (6 Weeks - 3 Months)</h4>
+                    <p>Sport-specific training, gradual return to sports and physical activities, continued strengthening, and functional training.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Arthroscopy vs Traditional Open Surgery</h2>
+                <p>Why choose minimally invasive keyhole surgery</p>
+            </div>
+            
+            <div class="comparison-container">
+                <div class="comparison-grid">
+                    <div class="comparison-card arthroscopy-card fade-in">
+                        <div class="comparison-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3>Arthroscopy Advantages</h3>
+                        <p>The modern approach to joint surgery</p>
+                        
+                        <ul class="comparison-list">
+                            <li><i class="fas fa-check"></i> Small incisions (5-10mm)</li>
+                            <li><i class="fas fa-check"></i> Less tissue damage</li>
+                            <li><i class="fas fa-check"></i> Reduced postoperative pain</li>
+                            <li><i class="fas fa-check"></i> Faster recovery time</li>
+                            <li><i class="fas fa-check"></i> Minimal scarring</li>
+                            <li><i class="fas fa-check"></i> Often outpatient procedure</li>
+                            <li><i class="fas fa-check"></i> Lower infection risk</li>
+                            <li><i class="fas fa-check"></i> Quicker return to activities</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-card traditional-card fade-in">
+                        <div class="comparison-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h3>Traditional Open Surgery</h3>
+                        <p>The conventional approach</p>
+                        
+                        <ul class="comparison-list">
+                            <li><i class="fas fa-times"></i> Large incision (10-20cm)</li>
+                            <li><i class="fas fa-times"></i> Significant tissue disruption</li>
+                            <li><i class="fas fa-times"></i> More postoperative pain</li>
+                            <li><i class="fas fa-times"></i> Longer recovery period</li>
+                            <li><i class="fas fa-times"></i> Noticeable scarring</li>
+                            <li><i class="fas fa-times"></i> Usually requires hospitalization</li>
+                            <li><i class="fas fa-times"></i> Higher infection risk</li>
+                            <li><i class="fas fa-times"></i> Slower return to normal activities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about arthroscopy and keyhole surgery</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>Is arthroscopy painful?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Arthroscopy is significantly less painful than traditional open surgery. Most patients experience mild to moderate discomfort that is well-managed with oral pain medications. The small incisions cause minimal tissue damage, resulting in less postoperative pain and faster recovery.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>How long does arthroscopy surgery take?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most arthroscopic procedures take between 30 minutes to 2 hours, depending on the complexity of the condition being treated. Simple procedures like diagnostic arthroscopy or loose body removal may take 30-45 minutes, while more complex repairs like ACL reconstruction or rotator cuff repair may take 1.5-2 hours.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>When can I return to work after arthroscopy?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Return to work depends on your job type and the joint treated. For sedentary jobs, you may return in 3-7 days. For jobs requiring standing or light physical activity, 1-2 weeks may be needed. For heavy manual labor or sports, 6-12 weeks may be required depending on your specific procedure and recovery progress.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>Are there risks with arthroscopy?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While arthroscopy is generally safe, all surgeries carry some risks. These may include infection, blood clots, nerve or blood vessel damage, stiffness, or incomplete resolution of symptoms. However, complication rates for arthroscopy are significantly lower than for traditional open surgery. Our experienced surgeons take all precautions to minimize risks.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>How long until I can drive after arthroscopy?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Driving is typically allowed when you have adequate control of the vehicle and are no longer taking narcotic pain medications. For knee or ankle arthroscopy, this is usually 1-2 weeks. For shoulder arthroscopy on your dominant side, driving may be restricted for 4-6 weeks. Always follow your surgeon's specific recommendations.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>Will I need physical therapy after arthroscopy?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, physical therapy is a crucial part of recovery after most arthroscopic procedures. It helps restore range of motion, rebuild strength, and ensure proper healing. The duration and intensity of therapy depend on the specific procedure, but most patients begin within days to weeks after surgery and continue for several weeks to months.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section-padding" id="cta">
+        <div class="container">
+            <div class="cta-content fade-in">
+                <h2>Ready for Joint Pain Relief?</h2>
+                <p>If you're suffering from joint pain, stiffness, or limited mobility, arthroscopy may be the solution. Our expert orthopedic surgeons specialize in minimally invasive keyhole surgery to get you back to the activities you love with less pain and faster recovery.</p>
+                <div class="hero-btns" style="justify-content: center;">
+                    <a href="tel:+919997772185" class="btn">Call for Arthroscopy Consultation</a>
+                    <a href="index.html#contact" class="btn btn-accent">Book Appointment Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <i class="fas fa-bone"></i>
+                        </div>
+                        <div class="footer-logo-text">
+                            <h3>ALIGN PLUS</h3>
+                            <p>Ortho & Sports Injury Care</p>
+                        </div>
+                    </div>
+                    <p>Expert arthroscopy and minimally invasive joint surgery for faster recovery and better outcomes. State-of-the-art facilities with experienced orthopedic surgeons.</p>
+                    <div class="logo-tagline" style="justify-content: flex-start; margin-top: 15px;">
+                        <span style="color: var(--accent)">MINIMALLY INVASIVE</span>
+                        <span style="color: var(--accent)">FASTER RECOVERY</span>
+                        <span style="color: var(--accent)">EXPERT CARE</span>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="index.html#treatments"><i class="fas fa-chevron-right"></i> All Treatments</a></li>
+                        <li><a href="index.html#doctor"><i class="fas fa-chevron-right"></i> Our Doctor</a></li>
+                        <li><a href="sports-injury.html"><i class="fas fa-chevron-right"></i> Sports Injury</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Arthroscopy Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Knee Arthroscopy</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Shoulder Arthroscopy</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Hip Arthroscopy</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Ankle Arthroscopy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address</strong>
+                                <p>44/1, Besant Avenue Road,<br>Padmanabha Nagar,<br>Adyar,<br>Chennai,<br>Tamil Nadu - 600020.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>+91 99977 72185</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>alignplusortho@gmail.com</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Timings</strong>
+                                <p>10am to 9pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div style="margin-top: 25px;">
+                        <a href="#cta" class="btn">Book Arthroscopy Consultation</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2025 Align Plus Ortho & Sports Injury Care. All rights reserved. | Arthroscopy & Keyhole Surgery Specialists</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navbar = document.getElementById('navbar');
+        const header = document.getElementById('header');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navbar.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Condition tabs functionality
+        const conditionTabs = document.querySelectorAll('.condition-tab');
+        const conditionContents = document.querySelectorAll('.condition-content');
+        
+        conditionTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const conditionId = tab.getAttribute('data-condition');
+                
+                // Remove active class from all tabs and contents
+                conditionTabs.forEach(t => t.classList.remove('active'));
+                conditionContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                document.getElementById(conditionId).classList.add('active');
+            });
+        });
+        
+        // FAQ functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close other FAQ items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current FAQ item
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Scroll animation
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('fade-in');
+                }
+            });
+        };
+        
+        // Initial check
+        fadeInOnScroll();
+        
+        // Check on scroll
+        window.addEventListener('scroll', fadeInOnScroll);
+    </script>
+</body>
+</html>
