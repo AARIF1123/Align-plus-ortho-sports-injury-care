@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Plus Ortho & Sports Injury Care | Premium Orthopaedic Care</title>
+    <link rel="icon" type="image/x-icon" href="LOGO-removebg-preview.png">
+    <link rel="apple-touch-icon" href="LOGO-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+
+        :root {
+            --primary: #769888; /* Changed from #4CAF7D to #769889 */
+            --primary-dark: #5a7c6c; /* Adjusted darker shade */
+            --accent: #FFC145;
+            --accent-dark: #E6A62A;
+            --secondary: #1E4532;
+            --light: #F8FDF9;
+            --gray: #E8F5EC;
+            --text: #2D3748;
+            --text-light: #5A6C5D;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow-hover: 0 15px 40px rgba(0,0,0,0.12);
+            --transition: all 0.4s cubic-bezier(0.165,0.84,0.44,1);
+            --border-radius: 16px;
+        }
+
+        html { scroll-behavior:smooth; overflow-x:hidden; }
+        body {
+            font-family:'Poppins',sans-serif;
+            color:var(--text);
+            line-height:1.7;
+            background:var(--light);
+            overflow-x:hidden;
+        }
+
+        h1,h2,h3,h4,h5 { font-family:'Playfair Display',serif; font-weight:600; line-height:1.3; color:var(--secondary); }
+
+        a { text-decoration:none; color:inherit; transition:var(--transition); }
+        ul { list-style:none; }
+
+        .container { width:100%; max-width:1400px; margin:0 auto; padding:0 20px; }
+        .section-padding { padding:100px 0; }
+
+        .section-title { text-align:center; margin-bottom:60px; }
+        .section-title h2 {
+            font-size:2.5rem; margin-bottom:20px; position:relative; display:inline-block;
+        }
+        .section-title h2::after {
+            content:''; position:absolute; width:80px; height:4px;
+            background:linear-gradient(90deg,var(--primary),var(--accent));
+            bottom:-15px; left:50%; transform:translateX(-50%);
+            border-radius:2px;
+        }
+        .section-title p { font-size:1.1rem; color:var(--text-light); max-width:700px; margin:30px auto 0; }
+
+        .btn {
+            display:inline-block; padding:16px 40px;
+            background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+            color:var(--white); border-radius:50px; font-weight:600; font-size:1.05rem;
+            transition:var(--transition); position:relative; overflow:hidden; z-index:1;
+            box-shadow:0 6px 15px rgba(118, 152, 136, 0.2); border:none; cursor:pointer;
+        }
+        .btn::before {
+            content:''; position:absolute; top:0; left:0; width:0%; height:100%;
+            background:linear-gradient(135deg,var(--accent-dark),var(--accent));
+            transition:var(--transition); z-index:-1; border-radius:50px;
+        }
+        .btn:hover::before { width:100%; }
+        .btn:hover { transform:translateY(-4px); box-shadow:0 12px 25px rgba(118, 152, 136, 0.3); }
+
+        .btn-accent { background:linear-gradient(135deg,var(--accent),var(--accent-dark)); }
+        .btn-accent::before { background:linear-gradient(135deg,var(--primary),var(--primary-dark)); }
+
+        /* ================================ */
+        /* 1. LARGER LOGO SIZE */
+        /* ================================ */
+        header {
+            position:fixed; top:0; left:0; width:100%; z-index:1000;
+            padding:15px 0; background:rgba(255,255,255,0.98); backdrop-filter:blur(10px);
+            box-shadow:0 5px 20px rgba(0,0,0,0.08);
+        }
+        .header-container {
+            display:flex; justify-content:space-between; align-items:center;
+            min-height:80px; padding:0 20px;
+        }
+        .logo-container { display:flex; align-items:center; gap:16px; }
+        .logo-img { 
+            height:100px; /* INCREASED from 85px to 100px */
+            width:auto; 
+            max-width:250px; /* INCREASED from 200px to 250px */
+            object-fit:contain; 
+        }
+        .logo-text {
+            display:flex; flex-direction:column; align-items:flex-start;
+        }
+        .logo-text h1 {
+            margin:0; font-family:'Almarai',sans-serif; font-weight:800;
+            font-size:2.5rem; /* Increased from 2.2rem */
+            color:var(--primary); letter-spacing:1.2px;
+            text-transform:uppercase; line-height:1;
+        }
+        .logo-text span {
+            margin-top:6px; /* Increased from 4px */
+            font-family:'Poppins',sans-serif; font-weight:600;
+            font-size:1.15rem; /* Increased from 1.05rem */
+            color:var(--secondary); letter-spacing:0.4px;
+        }
+
+        .ampersand {
+            font-family:'Poppins',sans-serif !important;
+            font-weight:600 !important;
+            font-style:normal !important;
+            color:inherit !important;
+            margin:0 4px;
+        }
+
+        nav {
+            position:fixed; top:0; left:-100%; width:85%; max-width:400px; height:100vh;
+            background:var(--white); box-shadow:var(--shadow-hover);
+            transition:var(--transition); padding:100px 30px 40px; z-index:999; overflow-y:auto;
+        }
+        nav.active { left:0; }
+        nav ul { display:flex; flex-direction:column; gap:25px; }
+        nav a {
+            font-weight:600; font-size:1.15rem; position:relative; padding:12px 0; display:block;
+            border-bottom:1px solid rgba(118, 152, 136, 0.1);
+        }
+        nav a:last-child { border-bottom:none; }
+        nav a::after {
+            content:''; position:absolute; width:0; height:2px;
+            background:linear-gradient(90deg,var(--primary),var(--accent));
+            bottom:0; left:0; transition:var(--transition);
+        }
+        nav a:hover::after, nav a.active::after { width:100%; }
+
+        .header-actions { display:flex; align-items:center; gap:20px; }
+        .header-appointment {
+            display:none; align-items:center; gap:10px; font-weight:700;
+            color:var(--white); background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+            padding:12px 25px; border-radius:50px;
+            transition:var(--transition); box-shadow:0 4px 12px rgba(118, 152, 136, 0.3);
+        }
+        .header-appointment:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(118, 152, 136, 0.4); }
+
+        .mobile-menu-btn {
+            display:block; font-size:1.5rem; color:var(--primary); background:none; border:none;
+            cursor:pointer; padding:10px; width:50px; height:50px;
+            display:flex; align-items:center; justify-content:center; border-radius:50%;
+        }
+        .mobile-menu-btn:hover { background:rgba(118, 152, 136, 0.1); }
+
+        /* ================================ */
+        /* 2. PROPERLY ALIGNED SOCIAL MEDIA ICONS */
+        /* ================================ */
+        .social-media-icons {
+            position: fixed;
+            right: 30px;
+            bottom: 100px; /* Positioned above WhatsApp */
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9998;
+        }
+
+        .instagram-icon,
+        .call-icon {
+            width: 60px; /* Slightly larger than WhatsApp */
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.6rem;
+            transition: var(--transition);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .instagram-icon {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+        }
+
+        .call-icon {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        }
+
+        .whatsapp-chatbox {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px; /* Slightly larger */
+            height: 65px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.2rem; /* Larger icon */
+            z-index: 9999;
+            box-shadow: 0 8px 25px rgba(37,211,102,0.4);
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        .instagram-icon:hover,
+        .call-icon:hover,
+        .whatsapp-chatbox:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .instagram-icon:hover { box-shadow: 0 10px 30px rgba(193, 53, 132, 0.6); }
+        .call-icon:hover { box-shadow: 0 10px 30px rgba(118, 152, 136, 0.6); }
+        .whatsapp-chatbox:hover { box-shadow: 0 12px 35px rgba(37,211,102,0.6); }
+
+        @keyframes pulse { 
+            0%,100% { box-shadow:0 8px 25px rgba(37,211,102,0.4); } 
+            50% { box-shadow:0 8px 30px rgba(37,211,102,0.7); } 
+        }
+
+        /* ================================ */
+        /* NEW COLORED HEADER SECTION */
+        /* ================================ */
+        .colored-header {
+            background-color: #769889;
+            padding: 20px 0 10px;
+            margin-top: 120px; /* Increased to accommodate larger logo */
+            color: white;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .colored-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .colored-header p {
+            font-size: 1.3rem;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .colored-header .hero-btns {
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        .colored-header .hero-stats {
+            display:flex; justify-content:center; gap:40px;
+            background:rgba(255,255,255,0.15); backdrop-filter:blur(12px);
+            border-radius:var(--border-radius); padding:40px 30px; margin-top:50px;
+            max-width:1000px; margin-left:auto; margin-right:auto;
+            border:1px solid rgba(255,255,255,0.2);
+        }
+
+        .colored-header .stat-number {
+            font-size:3rem; font-weight:700; color:var(--accent);
+            display:block; margin-bottom:10px;
+        }
+
+        .colored-header .stat-text { 
+            font-size:1.1rem; 
+            color:#f0f0f0; 
+        }
+
+        /* ================================ */
+        /* HERO SECTION (SLIDESHOW) - REDUCED HEIGHT */
+        /* ================================ */
+        .hero {
+            min-height: 80vh; /* Reduced from 100vh */
+            display:flex; align-items:center; position:relative;
+            color:var(--white); overflow:hidden; padding:40px 0 60px;
+        }
+        
+        .swiper { 
+            position:absolute; 
+            inset:0; 
+            z-index:-1; 
+            height: 100%; /* Ensure it fills the reduced height */
+        }
+        
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            height: 100%; /* Ensure slides fill container */
+        }
+        
+        .swiper-slide::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        
+        .swiper-slide > * { position: relative; z-index: 2; }
+        
+        .hero-container { 
+            position: relative; 
+            z-index: 3; 
+            text-align:center; 
+            padding:0 20px; 
+        }
+        
+        /* Hide the text content in hero since it's now in colored-header */
+        .hero-content h2,
+        .hero-content p,
+        .hero-content .hero-btns,
+        .hero-content .hero-stats {
+            display: none;
+        }
+
+        /* Show only what's needed in hero */
+        .hero-content {
+            width:100%; 
+            max-width:1000px; 
+            margin:0 auto; 
+            padding:40px 0; 
+        }
+
+        /* ================================ */
+        /* EXISTING STYLES CONTINUE */
+        /* ================================ */
+        .revive-section {
+            background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+            color:var(--white); padding:100px 0;
+        }
+        .revive-container { display:flex; gap:40px; max-width:1200px; margin:0 auto; }
+        .revive-item {
+            text-align:center; padding:60px 40px; background:rgba(255,255,255,0.2);
+            backdrop-filter:blur(20px); border-radius:var(--border-radius);
+            border:1px solid rgba(255,255,255,0.2); flex:1;
+        }
+        .revive-icon { font-size:3.5rem; color:var(--accent); margin-bottom:30px; }
+        .revive-text {
+            font-size:2.8rem; font-weight:700; margin-bottom:20px;
+            font-family:'Playfair Display',serif;
+        }
+        .revive-desc { font-size:1.15rem; opacity:0.95; line-height:1.7; }
+
+        .mission-vision-container {
+            display:flex; gap:60px; max-width:1200px; margin:0 auto;
+        }
+        .mission-card {
+            background:var(--white); border-radius:var(--border-radius);
+            padding:70px 50px; box-shadow:var(--shadow); flex:1; border-top:5px solid var(--primary);
+        }
+        .mission-icon { font-size:3.5rem; color:var(--primary); margin-bottom:35px; }
+        .mission-card h3 { font-size:2.2rem; margin-bottom:25px; }
+        .mission-card p { font-size:1.15rem; line-height:1.8; color:var(--text-light); }
+
+        .about-container {
+            display:flex; gap:60px; align-items:center;
+            max-width:1200px; margin:0 auto;
+        }
+        .about-img-main {
+            max-width: 500px; width: 100%;
+            border-radius:var(--border-radius); overflow:hidden; box-shadow:var(--shadow);
+        }
+        .about-img-main img {
+            width: 100%; height: auto; display: block;
+        }
+        .about-content h2 { font-size:2.5rem; margin-bottom:25px; }
+        .about-content p { margin-bottom:25px; color:var(--text-light); font-size:1.15rem; line-height:1.8; }
+        .about-features { display:grid; grid-template-columns:repeat(2,1fr); gap:25px; margin-top:40px; }
+        .about-feature {
+            display:flex; align-items:center; gap:20px; padding:25px;
+            background:rgba(118, 152, 136, 0.05); border-radius:12px;
+        }
+        .feature-icon {
+            width:70px; height:70px; background:rgba(118, 152, 136, 0.1);
+            border-radius:50%; display:flex; align-items:center; justify-content:center;
+            color:var(--primary); font-size:1.5rem; flex-shrink:0;
+        }
+
+        .treatments-container {
+            display:grid; grid-template-columns:repeat(4,1fr); gap:30px;
+            max-width:1400px; margin:0 auto;
+        }
+        .treatment-card {
+            background:var(--white); border-radius:var(--border-radius);
+            padding:50px 30px; text-align:center; box-shadow:var(--shadow);
+            border-top:4px solid var(--primary); display:flex; flex-direction:column; align-items:center;
+        }
+        .treatment-icon {
+            width:80px; height:80px;
+            background:linear-gradient(135deg,rgba(118, 152, 136, 0.1),rgba(255,193,69,0.1));
+            border-radius:50%; display:flex; align-items:center; justify-content:center;
+            margin:0 auto 25px; font-size:2rem; color:var(--primary);
+        }
+        .treatment-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .doctor-container {
+            display:flex; gap:60px; align-items:center;
+            max-width:1200px; margin:0 auto;
+        }
+        .doctor-img-main {
+            max-width: 480px; width: 100%;
+            border-radius:var(--border-radius); overflow:hidden; box-shadow:var(--shadow);
+        }
+        .doctor-img-main img {
+            width: 100%; height: auto; display: block;
+        }
+        .doctor-info h3 { font-size:2.5rem; margin-bottom:15px; }
+        .doctor-title { color:var(--primary); font-weight:600; margin-bottom:25px; font-size:1.15rem; line-height:1.6; }
+        .doctor-qualifications {
+            background:rgba(118, 152, 136, 0.08); padding:40px 35px;
+            border-radius:var(--border-radius); margin:30px 0; border-left:4px solid var(--accent);
+        }
+        .doctor-qualifications ul { display:grid; grid-template-columns:repeat(2,1fr); gap:15px; }
+        .doctor-qualifications li {
+            position:relative; padding-left:30px; color:var(--text-light);
+            font-size:1.05rem; line-height:1.6;
+        }
+        .doctor-qualifications li::before {
+            content:'✓'; position:absolute; left:0; color:var(--accent);
+            font-weight:bold; font-size:1.2rem;
+        }
+
+        .blog-container {
+            display:grid; grid-template-columns:repeat(3,1fr); gap:35px;
+            max-width:1200px; margin:0 auto;
+        }
+        .blog-card {
+            background:var(--white); border-radius:var(--border-radius);
+            overflow:hidden; box-shadow:var(--shadow);
+        }
+        .blog-image { height:280px; overflow:hidden; }
+        .blog-image img { width:100%; height:100%; object-fit:cover; }
+        .blog-content { padding:40px 30px; }
+        .blog-date { color:var(--primary); font-size:0.95rem; font-weight:600; margin-bottom:20px; }
+        .blog-content h3 { font-size:1.5rem; margin-bottom:20px; }
+        .blog-content p { color:var(--text-light); margin-bottom:20px; font-size:1.05rem; line-height:1.7; }
+
+        .contact-section { background:var(--light); padding:100px 0 80px; }
+        .contact-container {
+            display:flex; gap:60px; margin-bottom:80px;
+            max-width:1400px; margin:0 auto 80px;
+        }
+        .contact-info { flex:1; display:grid; grid-template-columns:1fr; gap:30px; }
+        .contact-card {
+            background:var(--white); border-radius:var(--border-radius);
+            padding:50px 35px; box-shadow:var(--shadow); border-top:4px solid var(--primary);
+        }
+        .contact-icon {
+            width:80px; height:80px;
+            background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+            border-radius:50%; display:flex; align-items:center; justify-content:center;
+            margin:0 0 30px 0; color:var(--white); font-size:2rem;
+        }
+
+        .contact-form-container {
+            background:var(--white); border-radius:var(--border-radius);
+            padding:60px 50px; box-shadow:var(--shadow); flex:1.5;
+            border-top:4px solid var(--primary);
+        }
+        .contact-form { display:flex; flex-direction:column; gap:30px; }
+        .form-group { display:flex; flex-direction:column; }
+        .form-row { display:flex; gap:30px; }
+        .form-group label { font-weight:600; margin-bottom:15px; color:var(--secondary); font-size:1.1rem; }
+        .form-group input, .form-group select, .form-group textarea {
+            padding:18px 25px; border:2px solid var(--gray); border-radius:10px;
+            font-family:'Poppins',sans-serif; font-size:1.05rem; background:var(--light); width:100%;
+        }
+
+        .map-embed {
+            border-radius:var(--border-radius); overflow:hidden; box-shadow:var(--shadow);
+            height:450px; width:100%;
+        }
+
+        footer {
+            background:var(--secondary); color:var(--white);
+            padding:100px 0 40px;
+        }
+        .footer-container {
+            display:grid; grid-template-columns:repeat(4,1fr); gap:50px;
+            margin-bottom:60px; max-width:1400px; margin:0 auto;
+        }
+        .footer-col h3 {
+            font-size:1.6rem; margin-bottom:30px; position:relative;
+            padding-bottom:20px;
+        }
+        .footer-col h3::after {
+            content:''; position:absolute; width:60px; height:3px;
+            background:linear-gradient(90deg,var(--primary),var(--accent));
+            bottom:0; left:0; border-radius:2px;
+        }
+        .footer-logo {
+            display:flex; align-items:center; gap:20px; margin-bottom:30px;
+        }
+        .footer-logo-icon {
+            width:70px; height:70px;
+            background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+            border-radius:50%; display:flex; align-items:center; justify-content:center;
+            color:var(--white); font-size:1.8rem; flex-shrink:0;
+        }
+        .footer-col p { margin-bottom:30px; opacity:0.85; font-size:1.1rem; line-height:1.8; }
+        .footer-links li { margin-bottom:18px; }
+        .footer-links a {
+            opacity:0.85; font-size:1.05rem; display:flex; align-items:center;
+            gap:10px; transition:var(--transition);
+        }
+        .footer-links a:hover { opacity:1; color:var(--accent); }
+
+        .contact-info li {
+            margin-bottom:30px; display:flex; align-items:flex-start; gap:20px;
+        }
+        .contact-info i { 
+            color:var(--accent); 
+            margin-top:5px; 
+            font-size:1.3rem; 
+            flex-shrink:0;
+            min-width: 24px;
+        }
+        .contact-info strong { 
+            display:block; 
+            margin-bottom:8px; 
+            color:var(--accent); 
+            font-size:1.05rem; 
+            line-height: 1.4;
+        }
+        .contact-info p { 
+            opacity:0.85; 
+            line-height:1.7; 
+            margin-bottom:0; 
+            font-size:1rem;
+        }
+        
+        .contact-info div {
+            flex: 1;
+        }
+
+        .footer-btn .btn {
+            background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+            width:100%; max-width:240px; padding:18px 35px;
+        }
+
+        .copyright {
+            text-align:center; padding-top:50px;
+            border-top:1px solid rgba(255,255,255,0.15);
+            opacity:0.7; font-size:0.95rem; line-height:1.6;
+        }
+
+        /* ================================ */
+        /* RESPONSIVE STYLES */
+        /* ================================ */
+        @media (max-width: 1199px) {
+            .container { padding: 0 25px; }
+            .section-padding { padding: 90px 0; }
+            .hero-content h2 { font-size: 3.2rem; }
+            .hero-content p { font-size: 1.3rem; }
+            .colored-header h1 { font-size: 2.5rem; }
+            .colored-header p { font-size: 1.2rem; }
+            .treatments-container { grid-template-columns: repeat(3, 1fr); }
+            .blog-container { grid-template-columns: repeat(2, 1fr); }
+            .footer-container { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+            .social-media-icons {
+                right: 20px;
+                bottom: 90px;
+            }
+            .instagram-icon, .call-icon {
+                width: 55px;
+                height: 55px;
+                font-size: 1.5rem;
+            }
+            .whatsapp-chatbox {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+            .logo-img {
+                height: 90px;
+                max-width: 220px;
+            }
+            .logo-text h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .section-padding { padding: 80px 0; }
+            .section-title h2 { font-size: 2.2rem; }
+            .hero { min-height: 50vh; padding: 30px 0 40px; }
+            .colored-header { padding: 60px 0 40px; margin-top: 110px; }
+            .colored-header h1 { font-size: 2.2rem; }
+            .colored-header p { font-size: 1.1rem; }
+            .colored-header .hero-stats { padding: 30px 20px; gap: 30px; }
+            .colored-header .stat-number { font-size: 2.5rem; }
+            .footer-container { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+            .logo-img {
+                height: 80px;
+                max-width: 200px;
+            }
+            .logo-text h1 {
+                font-size: 2rem;
+            }
+            .logo-text span {
+                font-size: 1.05rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav { width:90%; }
+            .hero { min-height: 40vh; }
+            .colored-header { padding: 50px 20px 30px; margin-top: 100px; }
+            .colored-header h1 { font-size: 1.8rem; }
+            .colored-header p { font-size: 1rem; }
+            .colored-header .hero-btns { flex-direction: column; align-items: center; }
+            .colored-header .hero-stats { flex-direction: column; gap: 20px; }
+            .treatments-container { grid-template-columns: repeat(2, 1fr); }
+            .blog-container { grid-template-columns: 1fr; }
+            .footer-container { grid-template-columns: 1fr; gap: 40px; }
+            .header-appointment { display:none; }
+            .social-media-icons {
+                right: 15px;
+                bottom: 80px;
+                gap: 10px;
+            }
+            .instagram-icon, .call-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.4rem;
+            }
+            .whatsapp-chatbox {
+                width: 55px;
+                height: 55px;
+                font-size: 1.8rem;
+                right: 15px;
+                bottom: 15px;
+            }
+            .logo-img {
+                height: 70px;
+                max-width: 180px;
+            }
+            .logo-text h1 {
+                font-size: 1.8rem;
+            }
+            .logo-text span {
+                font-size: 1rem;
+            }
+        }
+
+        @media (min-width:1200px) {
+            nav { position:static; width:auto; height:auto; background:none; box-shadow:none; padding:0; }
+            nav ul { flex-direction:row; gap:35px; }
+            nav a { font-size:1.1rem; padding:10px 0; border-bottom:none; }
+            .mobile-menu-btn { display:none; }
+            .header-appointment { display:flex; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="social-media-icons">
+        <a href="https://www.instagram.com/alignplusortho" target="_blank" class="instagram-icon" title="Follow us on Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="tel:+919997772185" class="call-icon" title="Call us">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <a href="https://wa.me/919997772185?text=Hi%20Align%20Plus%20Ortho%20Clinic,%20I'd%20like%20to%20book%20an%20appointment"
+       target="_blank" class="whatsapp-chatbox" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="#home">
+                    <img src="LOGO-removebg-preview.png" alt="Align Plus Logo" class="logo-img">
+                </a>
+                <div class="logo-text">
+                    <h1>ALIGN PLUS</h1>
+                    <span>Ortho <span class="ampersand">&</span> Sports Injury Care</span>
+                </div>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#treatments">Treatments</a></li>
+                    <li><a href="#doctor">Doctor</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:+919997772185" class="header-appointment">
+                    <i class="fas fa-calendar-check"></i> Appointment
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================================ -->
+    <!-- NEW COLORED HEADER SECTION -->
+    <!-- ================================ -->
+    <section class="colored-header" id="home">
+        <div class="container">
+            <h1>Exceptional Orthopaedic <span class="ampersand">&</span> Sports-Injury Care</h1>
+        </div>
+    </section>
+
+    <!-- ================================ -->
+    <!-- HERO SECTION (REDUCED SLIDESHOW) -->
+    <!-- ================================ -->
+    <section class="hero">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url('IMG_4319.JPEG');"></div>
+                <div class="swiper-slide" style="background-image: url('IMG_4320.JPEG');"></div>
+                <div class="swiper-slide" style="background-image: url('IMG_4321.JPEG');"></div>
+                <div class="swiper-slide" style="background-image: url('IMG_4322.JPEG');"></div>
+            </div>
+        </div>
+
+        <div class="container hero-container">
+            <div class="hero-content">
+                <!-- Content hidden - moved to colored-header section -->
+                <h2>Exceptional Orthopaedic <span class="ampersand">&</span> Sports-Injury Care</h2>
+                <p >We provide tailored treatment plans and a unique, results-driven method designed to relieve pain, restore confidence, and create long-lasting improvement in movement and overall well-being.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn">Book an Appointment</a>
+                    <a href="#doctor" class="btn btn-accent">Meet Our Doctor</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number">100%</span><span class="stat-text">Patient Satisfaction</span></div>
+                    <div class="stat-item"><span class="stat-number">15+</span><span class="stat-text">Years Experience</span></div>
+                    <div class="stat-item"><span class="stat-number">5000+</span><span class="stat-text">Patients Treated</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="revive-section">
+        <div class="container revive-container">
+            <div class="revive-item">
+                <div class="revive-icon"><i class="fas fa-hospital-user"></i></div>
+                <div class="revive-text">REVIVE</div>
+                <div class="revive-desc">Restoring movement and vitality through advanced orthopaedic treatments</div>
+            </div>
+            <div class="revive-item">
+                <div class="revive-icon"><i class="fas fa-dumbbell"></i></div>
+                <div class="revive-text">REGAIN</div>
+                <div class="revive-desc">Recovering strength and function with personalized rehabilitation plans</div>
+            </div>
+            <div class="revive-item">
+                <div class="revive-icon"><i class="fas fa-person-rays"></i></div>
+                <div class="revive-text">REBUILD</div>
+                <div class="revive-desc">Rebuilding confidence and performance for a pain-free active life</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-vision section-padding" id="mission">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Mission <span class="ampersand">&</span> Vision</h2>
+                <p>Our commitment to exceptional patient care and clinical excellence</p>
+            </div>
+            <div class="mission-vision-container">
+                <div class="mission-card">
+                    <div class="mission-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Our Mission</h3>
+                    <p>To deliver exceptional orthopaedic and sports-injury care through a thoughtful, patient-first approach that begins with truly listening to each individual's needs. Supported by an efficient and skilled orthopaedic team, we provide tailored treatment plans designed to relieve pain, restore confidence, and create long-lasting improvement.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Our Vision</h3>
+                    <p>To elevate the standard of orthopaedic and sports-injury care by combining advanced clinical expertise with a deeply personal, empathy-driven experience. We strive to become a trusted destination where patients receive innovative, tailored treatments that support lasting recovery and a lifetime of confident, pain-free movement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+                <p>Learn about our approach to orthopaedic care</p>
+            </div>
+            <div class="about-container">
+                <div class="about-img">
+                    <div class="about-img-main">
+                        <img src="ARUNKUMAR.jpeg" alt="Align Plus Ortho Clinic Interior">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2>Align Plus Ortho Sports Injury Care</h2>
+                    <p>Align Plus Ortho Sports Injury Care was built on a simple belief: every patient deserves both exceptional medical expertise and genuine human understanding. Our clinic brings together an efficient orthopaedic team known for precision, empathy, and a commitment to long-lasting results.</p>
+                    <p>From sports injuries to chronic orthopaedic conditions, we take the time to listen carefully to each patient's concerns, ensuring that every treatment plan is thoughtfully tailored to their goals, lifestyle, and recovery needs.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-user-md"></i></div>
+                            <div><h4>Expert Team</h4><p>Specialized orthopaedic surgeons</p></div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                            <div><h4>Patient-First</h4><p>Personalized care approach</p></div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-clinic-medical"></i></div>
+                            <div><h4>Advanced Technology</h4><p>State-of-the-art equipment</p></div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-award"></i></div>
+                            <div><h4>Proven Results</h4><p>High success rates</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="doctor-profile section-padding" id="doctor">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Specialist</h2>
+                <p>Expert care from a renowned orthopaedic surgeon</p>
+            </div>
+            <div class="doctor-container">
+                <div class="doctor-img">
+                    <div class="doctor-img-main">
+                        <img src="doctorsuit.PNG" alt="Dr. Arunkumar T">
+                    </div>
+                </div>
+                <div class="doctor-info">
+                    <h3>Dr. Arunkumar T</h3>
+                    <span class="doctor-title">MBBS, MS(Orthopedics),<br>Fellowship (Pelvic & Acetabular Trauma),<br>Fellowship (Arthroplasty & Arthroscopy),<br>Fellowship (Stem cell and Regenerative Medicine)</span>
+                    <span class="doctor-title">Senior Consultant Orthopaedic Surgeon</span>
+                    <p>Dr. Arunkumar T is an accomplished orthopaedic surgeon renowned for his expertise in advanced joint preservation, regenerative therapies, and complex reconstructive procedures.</p>
+                    <div class="doctor-qualifications">
+                        <h4>Specializations & Expertise</h4>
+                        <ul>
+                            <li>Regenerative Orthopedics & Orthobiologics</li>
+                            <li>Sports Injury Prevention & Treatment</li>
+                            <li>Arthroscopy & Keyhole Surgery</li>
+                            <li>Arthritis Care & Joint Preservation</li>
+                            <li>Arthroplasty & Joint Replacement</li>
+                            <li>Complex Fracture Management</li>
+                            <li>Pediatric Orthopedics</li>
+                            <li>Senior Citizen's Musculoskeletal Health</li>
+                        </ul>
+                    </div>
+                    <p>His commitment to clinical excellence has been recognized nationally. He is the recipient of the prestigious R.C. Rallan Gold Medal, awarded by the Indian Orthopaedic Association in 2018, for groundbreaking research in degenerative intervertebral disc disease.</p>
+                    <a href="#contact" class="btn" style="margin-top:20px;">Book Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="treatments section-padding" id="treatments">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Treatments & Specialities</h2>
+                <p>Comprehensive orthopaedic care with specialized expertise</p>
+            </div>
+            <div class="treatments-container">
+                <a href="regenerativeortho.html" class="treatment-card">
+                    <div class="treatment-icon"><i class="fas fa-syringe"></i></div>
+                    <h3>Regenerative Orthopedics</h3>
+                    <p>Advanced treatments using PRP, stem cells, and other biologics to stimulate natural healing.</p>
+                </a>
+                <a href="sportsinjury.html" class="treatment-card">
+                    <div class="treatment-icon"><i class="fas fa-running"></i></div>
+                    <h3>Sports Injury Treatment</h3>
+                    <p>Comprehensive care for athletes including injury prevention, treatment, and performance enhancement.</p>
+                </a>
+                <a href="Arthroscopy.html" class="treatment-card">
+                    <div class="treatment-icon">
+                        <img src="ARTHOSCOPY.jpg" alt="Arthroscopy Surgery">
+                    </div>
+                    <h3>Arthroscopy Surgery</h3>
+                    <p>Minimally invasive procedures for joints using small incisions and specialized instruments.</p>
+                </a>
+                <a href="Arthritis Care.html" class="treatment-card">
+                    <div class="treatment-icon">
+                        <img src="ARTHIRIS.jpg" alt="Arthritis Care">
+                    </div>
+                    <h3>Arthritis Care</h3>
+                    <p>Advanced techniques to manage arthritis and preserve natural joint function for as long as possible.</p>
+                </a>
+                <a href="Arthroplasty.html" class="treatment-card">
+                    <div class="treatment-icon">
+                        <img src="JOINTREPLACEMENT.jpg" alt="Joint Replacement">
+                    </div>
+                    <h3>Joint Replacement</h3>
+                    <p>Advanced surgical techniques for hip, knee, and shoulder replacements using latest technology.</p>
+                </a>
+                <a href="fracturemanagement.html" class="treatment-card">
+                    <div class="treatment-icon">
+                        <img src="FRACTURE.jpg" alt="Fracture Management">
+                    </div>
+                    <h3>Fracture Management</h3>
+                    <p>Expert care for all types of fractures including complex and compound fractures.</p>
+                </a>
+                <a href="pediatrics.html" class="treatment-card">
+                    <div class="treatment-icon"><i class="fas fa-child"></i></div>
+                    <h3>Pediatric Orthopedics</h3>
+                    <p>Specialized care for children's bone, joint, and muscle conditions and injuries.</p>
+                </a>
+                <a href="senoir.html" class="treatment-card">
+                    <div class="treatment-icon"><i class="fas fa-user-clock"></i></div>
+                    <h3>Senior Citizen Health</h3>
+                    <p>Comprehensive care for age-related musculoskeletal conditions and mobility enhancement.</p>
+                </a>
+                <a href="weightloss.html" class="treatment-card">
+                    <div class="treatment-icon"><i class="fas fa-weight"></i></div>
+                    <h3>Fat Loss Journey</h3>
+                    <p>Personalized fat loss programs combining medical guidance, lifestyle changes, and long-term weight management.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-section section-padding" id="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest from Our Blog</h2>
+                <p>Stay updated with the latest in orthopaedic care, tips, and insights</p>
+            </div>
+            <div class="blog-container">
+                <a href="blog.html" class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sports Injury Prevention">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date"><i class="far fa-calendar"></i> March 15, 2025</div>
+                        <h3>Top 5 Exercises for Preventing Sports Injuries</h3>
+                        <p>Learn about the most effective exercises to prevent common sports injuries and maintain peak performance.</p>
+                        <div class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </a>
+                <a href="blog.html" class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Joint Health">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date"><i class="far fa-calendar"></i> March 10, 2025</div>
+                        <h3>Understanding Regenerative Medicine for Joint Pain</h3>
+                        <p>Discover how PRP and stem cell therapies are revolutionizing the treatment of chronic joint pain.</p>
+                        <div class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </a>
+                <a href="blog.html" class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Arthritis Care">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date"><i class="far fa-calendar"></i> March 5, 2025</div>
+                        <h3>Managing Arthritis: Lifestyle Changes That Make a Difference</h3>
+                        <p>Practical tips and lifestyle modifications that can significantly improve arthritis symptoms and quality of life.</p>
+                        <div class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </a>
+            </div>
+            <div style="text-align:center; margin-top:50px;">
+                <a href="blog.html" class="btn btn-accent">View All Blog Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section section-padding" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our orthopaedic specialists for consultation and appointments</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3>Our Location</h3>
+                        <p>44/1, Besant Avenue Road,<br>Padmanabha Nagar,<br>Adyar, Chennai,<br>Tamil Nadu - 600020</p>
+                        <a href="https://maps.google.com/?q=Align+Plus+Ortho+Adyar+Chennai" target="_blank" class="contact-link">View on Google Maps →</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <h3>Phone Numbers</h3>
+                        <p><strong>Appointments:</strong> +91 99977 72185</p>
+                        <p><strong>Emergency:</strong> +91 99977 72185</p>
+                        <p><strong>Tele Consultation:</strong> +91 99977 72185</p>
+                        <a href="tel:+919997772185" class="contact-link">Call Now →</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <h3>Email & Hours</h3>
+                        <p><strong>Email:</strong> alignplusortho@gmail.com</p>
+                        <p><strong>Consultation Hours:</strong><br>Monday - Saturday: 10:00 AM - 9:00 PM<br>Sunday: 10:00 AM - 2:00 PM</p>
+                        <a href="mailto:alignplusortho@gmail.com" class="contact-link">Send Email →</a>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <div class="contact-form-header">
+                        <h3>Book an Appointment</h3>
+                        <p>Fill out the form below and we'll get back to you within 24 hours</p>
+                    </div>
+
+                    <form class="contact-form" id="appointmentForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email address">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Preferred Date *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Preferred Time *</label>
+                            <select id="time" name="time" required>
+                                <option value="">Select preferred time</option>
+                                <option value="10:00-11:00">10:00 AM - 11:00 AM</option>
+                                <option value="11:00-12:00">11:00 AM - 12:00 PM</option>
+                                <option value="12:00-13:00">12:00 PM - 1:00 PM</option>
+                                <option value="14:00-15:00">2:00 PM - 3:00 PM</option>
+                                <option value="15:00-16:00">3:00 PM - 4:00 PM</option>
+                                <option value="16:00-17:00">4:00 PM - 5:00 PM</option>
+                                <option value="17:00-18:00">5:00 PM - 6:00 PM</option>
+                                <option value="18:00-19:00">6:00 PM - 7:00 PM</option>
+                                <option value="19:00-20:00">7:00 PM - 8:00 PM</option>
+                                <option value="20:00-21:00">8:00 PM - 9:00 PM</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="concern">Medical Concern *</label>
+                            <select id="concern" name="concern" required>
+                                <option value="">Select your concern</option>
+                                <option value="sports-injury">Sports Injury</option>
+                                <option value="joint-pain">Joint Pain</option>
+                                <option value="arthritis">Arthritis</option>
+                                <option value="fracture">Fracture</option>
+                                <option value="back-pain">Back Pain</option>
+                                <option value="shoulder-pain">Shoulder Pain</option>
+                                <option value="knee-pain">Knee Pain</option>
+                                <option value="hip-pain">Hip Pain</option>
+                                <option value="regenerative">Regenerative Medicine</option>
+                                <option value="second-opinion">Second Opinion</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message (Optional)</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Briefly describe your symptoms or concerns"></textarea>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="btn">Book Appointment</button>
+                            <p class="form-note">* We'll confirm your appointment via phone call within 24 hours</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <h3>Find Us Here</h3>
+                <div class="map-embed">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5886.8438945817925!2d80.2608302!3d13.007442699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267000afd9f81%3A0x60b2ec83b55021ec!2sALIGN%20PLUS%20ORTHO%20AND%20SPORTS%20INJURY%20CARE!5e1!3m2!1sen!2sin!4v1768199148495!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Align Plus Ortho & Sports Injury Care Clinic Location"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon"><i class="fas fa-bone"></i></div>
+                        <div class="footer-logo-text">
+                            <h3>ALIGN PLUS</h3>
+                            <p>Ortho <span class="ampersand">&</span> Sports Injury Care</p>
+                        </div>
+                    </div>
+                    <p>Delivering exceptional orthopaedic and sports-injury care through a thoughtful, patient-first approach that combines advanced clinical expertise with genuine human understanding.</p>
+                    <div class="logo-tagline">
+                        <span>REVIVE</span>
+                        <span>REGAIN</span>
+                        <span>REBUILD</span>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#mission"><i class="fas fa-chevron-right"></i> Mission & Vision</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#treatments"><i class="fas fa-chevron-right"></i> Treatments</a></li>
+                        <li><a href="#doctor"><i class="fas fa-chevron-right"></i> Our Doctor</a></li>
+                        <li><a href="#blog"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Our Treatments</h3>
+                    <ul class="footer-links">
+                        <li><a href="#treatments"><i class="fas fa-chevron-right"></i> Regenerative Orthopedics</a></li>
+                        <li><a href="#treatments"><i class="fas fa-chevron-right"></i> Sports Injury Care</a></li>
+                        <li><a href="#treatments"><i class="fas fa-chevron-right"></i> Arthroscopy</a></li>
+                        <li><a href="#treatments"><i class="fas fa-chevron-right"></i> Joint Preservation</a></li>
+                        <li><a href="#treatments"><i class="fas fa-chevron-right"></i> Joint Replacement</a></li>
+                        <li><a href="#treatments"><i class="fas fa-chevron-right"></i> Fracture Management</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address</strong>
+                                <p>44/1, Besant Avenue Road,<br>Padmanabha Nagar,<br>Adyar, Chennai,<br>Tamil Nadu - 600020</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>+91 99977 72185</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>alignplusortho@gmail.com</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Timings</strong>
+                                <p><strong>Physiotherapy, Sports Rehabilitation, Lab Services:</strong><br>9:00 AM – 9:00 PM</p>
+                                <p><strong>Orthopedic Doctor Consultation:</strong><br>3:00 PM – 9:00 PM</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="footer-btn">
+                        <a href="#contact" class="btn">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2025 Align Plus Ortho & Sports Injury Care. All rights reserved. | Designed by Brand Marketers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 0,
+            centeredSlides: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            loop: true,
+            speed: 800,
+            effect: 'fade',
+            fadeEffect: { crossFade: true }
+        });
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navbar = document.getElementById('navbar');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navbar.classList.contains('active')
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    navbar.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    window.scrollTo({
+                        top: target.offsetTop - 120,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('appointmentForm')?.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Appointment request sent! We will contact you soon.');
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>
