@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Practical step-by-step habits and process for sustainable fat loss and long-term weight management.">
+    <title>Weight Loss Journey – Sustainable Process | Align Plus Ortho</title>
+    <link rel="icon" type="image/x-icon" href="LOGO-removebg-preview.png">
+    <link rel="apple-touch-icon" href="LOGO-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Updated CSS Variables to match other pages */
+        :root {
+            --primary: #769888;
+            --primary-dark: #5a7c6c;
+            --accent: #FFC145;
+            --accent-dark: #E6A62A;
+            --secondary: #1E4532;
+            --light: #F8FDF9;
+            --gray: #E8F5EC;
+            --text: #2D3748;
+            --text-light: #5A6C5D;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow-hover: 0 15px 40px rgba(0,0,0,0.12);
+            --transition: all 0.4s cubic-bezier(0.165,0.84,0.44,1);
+            --border-radius: 16px;
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; overflow-x:hidden; }
+        body {
+            font-family:'Poppins',sans-serif; color:var(--text); line-height:1.7;
+            background:var(--light); overflow-x:hidden;
+        }
+        h1,h2,h3,h4,h5 { font-family:'Playfair Display',serif; font-weight:600; line-height:1.3; color:var(--secondary); }
+        a { text-decoration:none; color:inherit; transition:var(--transition); }
+        ul { list-style:none; }
+        .container { width:100%; max-width:1400px; margin:0 auto; padding:0 20px; }
+        .section-padding { padding:100px 0; }
+        .section-title { text-align:center; margin-bottom:60px; }
+        .section-title h2 {
+            font-size:2.5rem; margin-bottom:20px; position:relative; display:inline-block;
+        }
+        .section-title h2::after {
+            content:''; position:absolute; width:80px; height:4px;
+            background:linear-gradient(90deg,var(--primary),var(--accent));
+            bottom:-15px; left:50%; transform:translateX(-50%); border-radius:2px;
+        }
+        .section-title p { font-size:1.1rem; color:var(--text-light); max-width:700px; margin:30px auto 0; }
+
+        .btn {
+            display:inline-block; padding:16px 40px;
+            background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+            color:var(--white); border-radius:50px; font-weight:600; font-size:1.05rem;
+            transition:var(--transition); position:relative; overflow:hidden; z-index:1;
+            box-shadow:0 6px 15px rgba(118,152,136,0.2); border:none; cursor:pointer;
+        }
+        .btn::before {
+            content:''; position:absolute; top:0; left:0; width:0%; height:100%;
+            background:linear-gradient(135deg,var(--accent-dark),var(--accent));
+            transition:var(--transition); z-index:-1; border-radius:50px;
+        }
+        .btn:hover::before { width:100%; }
+        .btn:hover { transform:translateY(-4px); box-shadow:0 12px 25px rgba(118,152,136,0.3); }
+        .btn-accent { background:linear-gradient(135deg,var(--accent),var(--accent-dark)); }
+        .btn-accent::before { background:linear-gradient(135deg,var(--primary),var(--primary-dark)); }
+
+        /* ================================ */
+        /* HEADER - FROM OTHER PAGES */
+        /* ================================ */
+        header {
+            position:fixed; top:0; left:0; width:100%; z-index:1000; padding:15px 0;
+            background:rgba(255,255,255,0.98); backdrop-filter:blur(10px);
+            box-shadow:0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .header-container {
+            display:flex; justify-content:space-between; align-items:center;
+            min-height:80px; padding:0 20px;
+        }
+
+        .logo-container {
+            display:flex; align-items:center; gap:16px;
+        }
+
+        .logo-img {
+            height:140px; width:auto; max-width:250px; object-fit:contain;
+        }
+
+        .logo-text {
+            display:flex; flex-direction:column; align-items:center; text-align:center;
+        }
+
+        .logo-text h1 {
+            margin:0; font-family:'Albertus Nova'; font-weight:800; font-size:2.8rem;
+            color:var(--primary); letter-spacing:1.2px; text-transform:uppercase; line-height:1;
+        }
+
+        .logo-text span {
+            margin-top:6px; font-family:'Impact'; font-weight:400; font-size:2rem;
+            color:var(--secondary); letter-spacing:0.4px;
+        }
+
+        .ampersand {
+            font-family:'Poppins',sans-serif !important; font-weight:600 !important;
+            font-style:normal !important; color:inherit !important; margin:0 4px;
+        }
+
+        /* Navigation for Mobile */
+        nav {
+            position:fixed; top:0; left:-100%; width:85%; max-width:400px; height:100vh;
+            background:var(--white); box-shadow:var(--shadow-hover); transition:var(--transition);
+            padding:100px 30px 40px; z-index:999; overflow-y:auto;
+        }
+
+        nav.active { left:0; }
+        nav ul { display:flex; flex-direction:column; gap:25px; }
+        nav a {
+            font-weight:600; font-size:1.15rem; position:relative; padding:12px 0;
+            display:block; border-bottom:1px solid rgba(118,152,136,0.1);
+        }
+        nav a:last-child { border-bottom:none; }
+        nav a::after {
+            content:''; position:absolute; width:0; height:2px;
+            background:linear-gradient(90deg,var(--primary),var(--accent));
+            bottom:0; left:0; transition:var(--transition);
+        }
+        nav a:hover::after, nav a.active::after { width:100%; }
+
+        .header-actions { display:flex; align-items:center; gap:20px; }
+
+        .header-appointment {
+            display:none; align-items:center; gap:10px; font-weight:700; color:var(--white);
+            background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+            padding:12px 25px; border-radius:50px; transition:var(--transition);
+            box-shadow:0 4px 12px rgba(118,152,136,0.3);
+        }
+
+        .header-appointment:hover {
+            transform:translateY(-3px); box-shadow:0 8px 20px rgba(118,152,136,0.4);
+        }
+
+        .mobile-menu-btn {
+            display:block; font-size:1.5rem; color:var(--primary); background:none;
+            border:none; cursor:pointer; padding:10px; width:50px; height:50px;
+            display:flex; align-items:center; justify-content:center; border-radius:50%;
+        }
+
+        .mobile-menu-btn:hover { background:rgba(118,152,136,0.1); }
+
+        /* ================================ */
+        /* SOCIAL MEDIA ICONS */
+        /* ================================ */
+        .social-media-icons {
+            position:fixed; right:30px; bottom:100px; display:flex;
+            flex-direction:column; gap:15px; z-index:9998;
+        }
+
+        .instagram-icon, .call-icon {
+            width:60px; height:60px; border-radius:50%; display:flex;
+            align-items:center; justify-content:center; color:white; font-size:1.6rem;
+            transition:var(--transition); box-shadow:0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .instagram-icon {
+            background:linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+        }
+
+        .call-icon {
+            background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+        }
+
+        .whatsapp-chatbox {
+            position:fixed; bottom:30px; right:30px; width:65px; height:65px;
+            background:#25D366; border-radius:50%; display:flex; align-items:center;
+            justify-content:center; color:white; font-size:2.2rem; z-index:9999;
+            box-shadow:0 8px 25px rgba(37,211,102,0.4); transition:var(--transition);
+            animation:pulse 2s infinite;
+        }
+
+        .instagram-icon:hover, .call-icon:hover, .whatsapp-chatbox:hover {
+            transform:scale(1.1) rotate(5deg);
+        }
+
+        .instagram-icon:hover { box-shadow:0 10px 30px rgba(193,53,132,0.6); }
+        .call-icon:hover { box-shadow:0 10px 30px rgba(118,152,136,0.6); }
+        .whatsapp-chatbox:hover { box-shadow:0 12px 35px rgba(37,211,102,0.6); }
+
+        @keyframes pulse {
+            0%,100% { box-shadow:0 8px 25px rgba(37,211,102,0.4); }
+            50% { box-shadow:0 8px 30px rgba(37,211,102,0.7); }
+        }
+
+        /* Hero Section */
+        .arthritis-hero {
+            min-height:80vh; display:flex; align-items:center;
+            background:linear-gradient(rgba(26,45,39,0.9),rgba(26,45,39,0.95)),
+                       url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size:cover; background-position:center; color:var(--white);
+            position:relative; overflow:hidden; padding-top:120px;
+        }
+        .arthritis-hero::before {
+            content:''; position:absolute; top:0; left:0; width:100%; height:100%;
+            background:url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e6b74c' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity:0.3;
+        }
+        .arthritis-hero-container { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; position:relative; z-index:1; }
+        .arthritis-hero-content h1 { font-size:4rem; color:var(--white); margin-bottom:25px; line-height:1.2; }
+        .arthritis-hero-content h1 span { color:var(--accent); }
+        .arthritis-hero-content p { font-size:1.2rem; margin-bottom:40px; opacity:0.9; }
+        .hero-btns { display:flex; gap:20px; margin-top:30px; }
+        .arthritis-hero-image { position:relative; }
+        .arthritis-hero-img {
+            border-radius:var(--border-radius); overflow:hidden; box-shadow:var(--shadow-hover);
+            transform:perspective(1000px) rotateY(-10deg); transition:var(--transition);
+        }
+        .arthritis-hero-img:hover { transform:perspective(1000px) rotateY(0deg); }
+        .arthritis-hero-img img { width:100%; height:auto; display:block; }
+
+        .understanding-section { background:linear-gradient(135deg,rgba(118,152,137,0.05),rgba(230,183,76,0.05)); position:relative; }
+        .understanding-container { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+        .understanding-content h2 { font-size:3rem; margin-bottom:25px; }
+        .understanding-content p { margin-bottom:25px; color:var(--text-light); }
+        .arthritis-types { margin-top:40px; }
+        .type-card {
+            background:var(--white); border-radius:var(--border-radius); padding:30px;
+            margin-bottom:20px; transition:var(--transition); border-left:4px solid var(--primary); cursor:pointer;
+        }
+        .type-card.active { background:rgba(118,152,137,0.1); transform:translateX(10px); }
+        .type-card h4 { font-size:1.4rem; margin-bottom:10px; color:var(--primary-dark); display:flex; align-items:center; gap:10px; }
+        .type-card h4 i { color:var(--accent); }
+        .understanding-image { position:relative; }
+        .understanding-img {
+            border-radius:var(--border-radius); overflow:hidden; box-shadow:var(--shadow-hover);
+        }
+        .understanding-img img {
+            width:100%; height:auto; display:block; transition:var(--transition);
+        }
+        .understanding-img:hover img { transform:scale(1.05); }
+
+        .steps-section { background:var(--white); }
+        .steps-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:40px; }
+        .step-card {
+            background:var(--light); border-radius:var(--border-radius); padding:40px 30px; text-align:center;
+            transition:var(--transition); box-shadow:var(--shadow); border-bottom:4px solid var(--primary);
+        }
+        .step-card:hover { transform:translateY(-10px); box-shadow:var(--shadow-hover); }
+        .step-icon {
+            width:80px; height:80px;
+            background:linear-gradient(135deg,rgba(118,152,137,0.1),rgba(230,183,76,0.1));
+            border-radius:50%; display:flex; align-items:center; justify-content:center;
+            margin:0 auto 25px; font-size:2rem; color:var(--primary);
+        }
+        .step-card h4 { font-size:1.5rem; margin-bottom:15px; color:var(--secondary); }
+
+        .checklist-section { background:var(--gray); }
+        .checklist {
+            max-width:900px; margin:0 auto; background:var(--white);
+            border-radius:var(--border-radius); padding:50px; box-shadow:var(--shadow);
+        }
+        .checklist ul li {
+            margin-bottom:16px; font-size:1.1rem; display:flex; align-items:center; gap:12px;
+        }
+        .checklist li i { color:var(--accent); font-size:1.4rem; }
+
+        .cta-section {
+            background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+            color:var(--secondary); text-align:center; position:relative; overflow:hidden;
+        }
+        .cta-section::before {
+            content:''; position:absolute; top:0; left:0; width:100%; height:100%;
+            background:url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%231a2d27' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .cta-content { position:relative; z-index:1; max-width:800px; margin:0 auto; }
+        .cta-content h2 { font-size:3rem; margin-bottom:25px; }
+        .cta-content p { font-size:1.2rem; margin-bottom:40px; opacity:0.9; }
+
+        /* ================================ */
+        /* FOOTER - FROM OTHER PAGES */
+        /* ================================ */
+        footer {
+            background:var(--secondary); color:var(--white); padding:100px 0 40px;
+        }
+
+        .footer-container {
+            display:grid; grid-template-columns:repeat(4,1fr); gap:50px; margin-bottom:60px;
+        }
+
+        .footer-col h3 {
+            font-size:1.6rem; margin-bottom:30px; position:relative; padding-bottom:20px;
+        }
+
+        .footer-col h3::after {
+            content:''; position:absolute; width:60px; height:3px;
+            background:linear-gradient(90deg,var(--primary),var(--accent));
+            bottom:0; left:0; border-radius:2px;
+        }
+
+        .footer-logo {
+            display:flex; align-items:center; gap:20px; margin-bottom:30px;
+        }
+
+        .footer-logo-icon {
+            width:70px; height:70px;
+            background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+            border-radius:50%; display:flex; align-items:center; justify-content:center;
+            color:var(--white); font-size:1.8rem; flex-shrink:0;
+        }
+
+        .footer-col p {
+            margin-bottom:30px; opacity:0.85; font-size:1.1rem; line-height:1.8;
+        }
+
+        .footer-links li { margin-bottom:18px; }
+        .footer-links a {
+            opacity:0.85; font-size:1.05rem; display:flex; align-items:center; gap:10px;
+            transition:var(--transition);
+        }
+        .footer-links a:hover { opacity:1; color:var(--accent); }
+
+        .contact-info li {
+            margin-bottom:30px; display:flex; align-items:flex-start; gap:20px;
+        }
+        .contact-info i {
+            color:var(--accent); margin-top:5px; font-size:1.3rem;
+            flex-shrink:0; min-width:24px;
+        }
+        .contact-info strong {
+            display:block; margin-bottom:8px; color:var(--accent);
+            font-size:1.05rem; line-height:1.4;
+        }
+        .contact-info p {
+            opacity:0.85; line-height:1.7; margin-bottom:0; font-size:1rem;
+        }
+        .contact-info div { flex:1; }
+        .footer-btn .btn {
+            background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+            width:100%; max-width:240px; padding:18px 35px;
+        }
+        .copyright {
+            text-align:center; padding-top:50px; border-top:1px solid rgba(255,255,255,0.15);
+            opacity:0.7; font-size:0.95rem; line-height:1.6; padding:0 20px;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity:0; transform:translateY(30px); }
+            to { opacity:1; transform:translateY(0); }
+        }
+        .fade-in { animation:fadeInUp 0.8s ease forwards; }
+
+        /* ================================ */
+        /* DESKTOP NAVIGATION */
+        /* ================================ */
+        @media (min-width:1200px) {
+            nav {
+                position:static; width:auto; height:auto; background:none;
+                box-shadow:none; padding:0;
+            }
+            nav ul { flex-direction:row; gap:35px; }
+            nav a { font-size:1.1rem; padding:10px 0; border-bottom:none; }
+            .mobile-menu-btn { display:none; }
+            .header-appointment { display:flex; }
+        }
+
+        /* Responsive Styles */
+        @media (max-width:1200px) {
+            .steps-grid { grid-template-columns:repeat(2,1fr); }
+            .footer-container { grid-template-columns:repeat(2,1fr); gap:40px; }
+        }
+        @media (max-width:992px) {
+            .arthritis-hero-container { grid-template-columns:1fr; }
+            .arthritis-hero-content h1 { font-size:3rem; }
+            .section-title h2 { font-size:2.5rem; }
+        }
+        @media (max-width:768px) {
+            nav {
+                position:fixed; top:0; left:-100%; width:85%; max-width:400px;
+                height:100vh; background:var(--white); box-shadow:var(--shadow-hover);
+                transition:var(--transition); padding:100px 30px 40px; z-index:999;
+                overflow-y:auto;
+            }
+            nav.active { left:0; }
+            nav ul { flex-direction:column; gap:25px; }
+            nav a { padding:12px 0; border-bottom:1px solid rgba(118,152,136,0.1); }
+            .mobile-menu-btn { display:flex; }
+            .header-appointment { display:none; }
+            .arthritis-hero { padding-top:100px; }
+            .steps-grid { grid-template-columns:1fr; }
+            .section-padding { padding:80px 0; }
+            .arthritis-hero-content h1 { font-size:2.5rem; }
+            .hero-btns { flex-direction:column; align-items:flex-start; }
+            
+            /* Social Icons for Mobile */
+            .social-media-icons {
+                right:15px; bottom:80px; gap:10px;
+            }
+            .instagram-icon, .call-icon {
+                width:50px; height:50px; font-size:1.3rem;
+            }
+            .whatsapp-chatbox {
+                width:55px; height:55px; font-size:1.8rem;
+                right:15px; bottom:15px;
+            }
+        }
+        @media (min-width:769px) {
+            .header-appointment { display:flex; }
+        }
+        @media (max-width:576px) {
+            .arthritis-hero-content h1 { font-size:2.2rem; }
+            .section-title h2 { font-size:2rem; }
+            .btn { padding:14px 30px; }
+            .footer-container { grid-template-columns:1fr; gap:40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Social Media Icons -->
+    <div class="social-media-icons">
+        <a href="https://www.instagram.com/alignplusortho" target="_blank" class="instagram-icon" title="Follow us on Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="tel:+919997772185" class="call-icon" title="Call us">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- WhatsApp Chat -->
+    <a href="https://wa.me/919997772185?text=Hi%20Align%20Plus%20Ortho%20Clinic,%20I'd%20like%20to%20book%20an%20appointment"
+       target="_blank" class="whatsapp-chatbox" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="LOGO-removebg-preview.png" alt="Align Plus Logo" class="logo-img">
+                </a>
+                <div class="logo-text">
+                    <h1>ALIGN PLUS</h1>
+                    <span>Ortho <span class="ampersand">&</span> Sports Injury Care</span>
+                </div>
+            </div>
+            
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#treatments">Treatments</a></li>
+                    <li><a href="index.html#doctor">Doctor</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="sportsinjury.html">Sports Injury</a></li>
+                    <li><a href="arthroscopy.html">Arthroscopy</a></li>
+                    <li><a href="weightloss.html" class="active">Weight Loss</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="tel:+919997772185" class="header-appointment">
+                    <i class="fas fa-calendar-check"></i> Appointment
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="arthritis-hero">
+        <div class="container arthritis-hero-container">
+            <div class="arthritis-hero-content fade-in">
+                <h1>Weight Loss Journey <span>Sustainable Process</span></h1>
+                <p>A realistic sequence of actions and habits that support steady, maintainable fat loss over months and years.</p>
+                <div class="hero-btns">
+                    <a href="#steps" class="btn">See the Process</a>
+                    <a href="#checklist" class="btn btn-accent">Daily Checklist</a>
+                </div>
+            </div>
+            <div class="arthritis-hero-image fade-in">
+                <div class="arthritis-hero-img">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sustainable healthy habits">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Understanding / Process Section -->
+    <section class="understanding-section section-padding" id="steps">
+        <div class="container">
+            <div class="understanding-container">
+                <div class="understanding-image fade-in">
+                    <div class="understanding-img">
+                        <img src="https://images.unsplash.com/photo-1505576391880-815a2a55d462?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Healthy lifestyle habits">
+                    </div>
+                </div>
+                
+                <div class="understanding-content fade-in">
+                    <h2>The Process</h2>
+                    <p>Consistent repetition of realistic actions creates the biggest and most maintainable change over time.</p>
+                    <p>No extremes, no shortcuts — just clear steps that build on each other.</p>
+                    
+                    <div class="arthritis-types">
+                        <h3>Key Steps That Build Results:</h3>
+                        
+                        <div class="type-card active">
+                            <h4><i class="fas fa-search"></i> 1. Track Honestly First</h4>
+                            <p>Log food, drinks and activity exactly for 7–14 days with no changes. Measure weight, waist, take photos. This reveals real starting calories and patterns.</p>
+                        </div>
+                        
+                        <div class="type-card">
+                            <h4><i class="fas fa-minus-circle"></i> 2. Create Moderate Deficit</h4>
+                            <p>Reduce daily intake by 400–700 kcal below current level (≈15–20%). Aim for 0.5–1 kg/week loss. Re-adjust every 4–6 weeks as weight drops.</p>
+                        </div>
+                        
+                        <div class="type-card">
+                            <h4><i class="fas fa-drumstick-bite"></i> 3. Prioritize Protein</h4>
+                            <p>1.6–2.2 g per kg body weight daily (eggs, chicken, fish, paneer, dal, curd, soya). Protects muscle, increases fullness, reduces cravings.</p>
+                        </div>
+                        
+                        <div class="type-card">
+                            <h4><i class="fas fa-dumbbell"></i> 4. Strength Train Regularly</h4>
+                            <p>3–4 sessions/week: squats, deadlifts, presses, rows, lunges. Progressive overload preserves muscle mass and keeps metabolism higher long-term.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Steps Grid -->
+    <section class="steps-section section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Daily Building Blocks</h2>
+                <p>Small consistent actions that compound over time</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card fade-in">
+                    <div class="step-icon"><i class="fas fa-walking"></i></div>
+                    <h4>5. Daily Movement Goal</h4>
+                    <p>8,000–12,000 steps every day. Adds meaningful calorie burn without feeling like extra "exercise".</p>
+                </div>
+
+                <div class="step-card fade-in">
+                    <div class="step-icon"><i class="fas fa-bed"></i></div>
+                    <h4>6. Sleep & Stress First</h4>
+                    <p>7–9 hours quality sleep. Basic stress buffers (breathing, walks, no screens late). Poor sleep strongly increases hunger hormones.</p>
+                </div>
+
+                <div class="step-card fade-in">
+                    <div class="step-icon"><i class="fas fa-carrot"></i></div>
+                    <h4>7. High-Volume Meals</h4>
+                    <p>Fill up on vegetables, soups, salads. Allow 10–20% calories for foods you enjoy. Prevents feeling deprived long-term.</p>
+                </div>
+
+                <div class="step-card fade-in">
+                    <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+                    <h4>8. Smart Tracking</h4>
+                    <p>Weigh 1–3×/week (morning average). Waist/photos every 2–4 weeks. Adjust plan when stalled 3–4 weeks.</p>
+                </div>
+
+                <div class="step-card fade-in">
+                    <div class="step-icon"><i class="fas fa-pause-circle"></i></div>
+                    <h4>9. Handle Plateaus Normally</h4>
+                    <p>Increase steps, tighten tracking, add one strength session, or do 1–2 weeks at maintenance calories.</p>
+                </div>
+
+                <div class="step-card fade-in">
+                    <div class="step-icon"><i class="fas fa-lock"></i></div>
+                    <h4>10. Plan Maintenance Early</h4>
+                    <p>Slowly increase calories (50–100 kcal every 1–2 weeks) after goal. Keep protein high + lifting to protect results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Checklist -->
+    <section class="checklist-section section-padding" id="checklist">
+        <div class="container">
+            <div class="section-title">
+                <h2>Daily Consistency Snapshot</h2>
+                <p>Quick checklist of the most powerful daily actions</p>
+            </div>
+
+            <div class="checklist">
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Hit daily protein target</li>
+                    <li><i class="fas fa-check-circle"></i> Stay in calorie range</li>
+                    <li><i class="fas fa-check-circle"></i> Reach step goal (8–12k)</li>
+                    <li><i class="fas fa-check-circle"></i> Strength training or movement done</li>
+                    <li><i class="fas fa-check-circle"></i> 7+ hours quality sleep</li>
+                    <li><i class="fas fa-check-circle"></i> 2.5–3.5 L water</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section-padding" id="cta">
+        <div class="container">
+            <div class="cta-content fade-in">
+                <h2>Start With One Honest Week</h2>
+                <p>Track food, drinks and steps exactly for 7 days — no changes yet. This single step shows the real starting point and builds momentum.</p>
+                <div class="hero-btns" style="justify-content:center;">
+                    <a href="#steps" class="btn">Read the Full Process</a>
+                    <a href="tel:+919997772185" class="btn btn-accent">Book Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                        <div class="footer-logo-text">
+                            <h3>ALIGN PLUS</h3>
+                            <p>Ortho <span class="ampersand">&</span> Sports Injury Care</p>
+                        </div>
+                    </div>
+                    <p>Expert guidance for sustainable weight loss and healthy lifestyle habits. Our approach focuses on realistic, maintainable changes that lead to long-term results.</p>
+                    <div class="logo-tagline" style="margin-top:15px; display:flex; gap:10px; flex-wrap:wrap;">
+                        <span style="background:rgba(255,193,69,0.1); padding:5px 15px; border-radius:20px;">SUSTAINABLE APPROACH</span>
+                        <span style="background:rgba(255,193,69,0.1); padding:5px 15px; border-radius:20px;">HEALTHY HABITS</span>
+                        <span style="background:rgba(255,193,69,0.1); padding:5px 15px; border-radius:20px;">LONG-TERM RESULTS</span>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="index.html#treatments"><i class="fas fa-chevron-right"></i> All Treatments</a></li>
+                        <li><a href="index.html#doctor"><i class="fas fa-chevron-right"></i> Our Doctor</a></li>
+                        <li><a href="sportsinjury.html"><i class="fas fa-chevron-right"></i> Sports Injury</a></li>
+                        <li><a href="arthroscopy.html"><i class="fas fa-chevron-right"></i> Arthroscopy</a></li>
+                        <li><a href="weightloss.html"><i class="fas fa-chevron-right"></i> Weight Loss Guide</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Nutrition Counseling</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Weight Loss Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Personalized Diet Plans</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Exercise Programming</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Habit Coaching</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Progress Monitoring</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address</strong>
+                                <p>44/1, Besant Avenue Road,<br>Padmanabha Nagar,<br>Adyar, Chennai,<br>Tamil Nadu - 600020</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>+91 99977 72185</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>alignplusortho@gmail.com</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Timings</strong>
+                                <p><strong>Physiotherapy & Services:</strong><br>9:00 AM – 9:00 PM</p>
+                                <p><strong>Doctor Consultation:</strong><br>3:00 PM – 9:00 PM</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="footer-btn">
+                        <a href="#cta" class="btn">Book Weight Loss Consultation</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2025 Align Plus Ortho & Sports Injury Care. All rights reserved. | Sustainable Weight Loss & Healthy Lifestyle Guidance</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navbar = document.getElementById('navbar');
+        const header = document.getElementById('header');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navbar.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Active navigation link on scroll
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Type card interaction
+        const typeCards = document.querySelectorAll('.type-card');
+        typeCards.forEach(card => {
+            card.addEventListener('click', () => {
+                typeCards.forEach(c => c.classList.remove('active'));
+                card.classList.add('active');
+            });
+        });
+        
+        // Scroll animation
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('fade-in');
+                }
+            });
+        };
+        
+        // Initial check
+        fadeInOnScroll();
+        
+        // Check on scroll
+        window.addEventListener('scroll', fadeInOnScroll);
+
+        // Adjust social icons position on mobile landscape
+        function adjustSocialIcons() {
+            const socialIcons = document.querySelector('.social-media-icons');
+            const whatsappIcon = document.querySelector('.whatsapp-chatbox');
+            
+            if (window.innerHeight < 500 && window.innerWidth > window.innerHeight) {
+                // Landscape mode on mobile
+                socialIcons.style.bottom = '60px';
+                socialIcons.style.right = '15px';
+                whatsappIcon.style.bottom = '15px';
+                whatsappIcon.style.right = '15px';
+            } else {
+                // Portrait mode or desktop
+                socialIcons.style.bottom = '100px';
+                socialIcons.style.right = '30px';
+                whatsappIcon.style.bottom = '30px';
+                whatsappIcon.style.right = '30px';
+            }
+        }
+
+        // Initial adjustment
+        adjustSocialIcons();
+        
+        // Adjust on resize and orientation change
+        window.addEventListener('resize', adjustSocialIcons);
+        window.addEventListener('orientationchange', adjustSocialIcons);
+    </script>
+</body>
+</html>
